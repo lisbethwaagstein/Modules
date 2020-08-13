@@ -1,13 +1,1 @@
-
-4;download_jobposting;requests;1597291628.6651828;-0.8173251152038574;https://job.jobnet.dk/CV/FindWork?Offset=11240&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=11240&SortValue=CreationDate;19917;200;True;
-5;download_jobposting;requests;1597291700.3247435;-0.21312499046325684;https://job.jobnet.dk/CV/FindWork?Offset=1820&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=1820&SortValue=CreationDate;19916;200;True;
-6;download_jobposting;requests;1597291753.7429688;-0.20678997039794922;https://job.jobnet.dk/CV/FindWork?Offset=7480&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=7480&SortValue=CreationDate;19916;200;True;
-7;download_jobposting;requests;1597291788.1083283;-0.2069261074066162;https://job.jobnet.dk/CV/FindWork?Offset=4220&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=4220&SortValue=CreationDate;19916;200;True;
-8;download_jobposting;requests;1597292240.6355531;-0.7696652412414551;https://job.jobnet.dk/CV/FindWork?Offset=13340&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=13340&SortValue=CreationDate;19917;200;True;
-9;download_jobposting;requests;1597292266.1004643;-0.18492889404296875;https://job.jobnet.dk/CV/FindWork?Offset=13740&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=13740&SortValue=CreationDate;19917;200;True;
-10;download_jobposting;requests;1597292424.8999028;-0.7830324172973633;https://job.jobnet.dk/CV/FindWork?Offset=1640&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=1640&SortValue=CreationDate;19916;200;True;
-11;download_jobposting;requests;1597292504.5536296;-0.18445706367492676;https://job.jobnet.dk/CV/FindWork?Offset=1280&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=1280&SortValue=CreationDate;19916;200;True;
-12;download_jobposting;requests;1597292659.0220695;-0.8380272388458252;https://job.jobnet.dk/CV/FindWork?Offset=9260&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=9260&SortValue=CreationDate;19916;200;True;
-13;download_jobposting;requests;1597292685.0675392;-0.2219235897064209;https://job.jobnet.dk/CV/FindWork?Offset=8400&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=8400&SortValue=CreationDate;19916;200;True;
-14;download_jobposting;requests;1597292757.4920528;-7.171107053756714;https://job.jobnet.dk/CV/FindWork?Offset=2240&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=2240&SortValue=CreationDate;19916;200;True;
-15;download_jobposting;requests;1597292855.6012912;-0.21574950218200684;https://job.jobnet.dk/CV/FindWork?Offset=0&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=0&SortValue=CreationDate;19913;200;True;
+id;project;connector_type;t;delta_t;url;redirect_url;response_size;response_code;success;error
