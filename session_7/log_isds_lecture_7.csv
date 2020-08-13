@@ -1,2 +1,0 @@
-id;project;connector_type;t;delta_t;url;redirect_url;response_size;response_code;success;error
-0;test_call;requests;1597319253.7078714;-36.49096202850342;https://www.theguardian.com/us-news/2019/aug/14/taco-eating-contest-death-fresno-california;;0;;False;HTTPSConnectionPool(host='www.theguardian.com', port=443): Read timed out. (read timeout=30)

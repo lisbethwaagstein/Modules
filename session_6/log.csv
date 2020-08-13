@@ -11,3 +11,7 @@
 13;download_jobposting;requests;1597292685.0675392;-0.2219235897064209;https://job.jobnet.dk/CV/FindWork?Offset=8400&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=8400&SortValue=CreationDate;19916;200;True;
 14;download_jobposting;requests;1597292757.4920528;-7.171107053756714;https://job.jobnet.dk/CV/FindWork?Offset=2240&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=2240&SortValue=CreationDate;19916;200;True;
 15;download_jobposting;requests;1597292855.6012912;-0.21574950218200684;https://job.jobnet.dk/CV/FindWork?Offset=0&SortValue=CreationDate;https://job.jobnet.dk/CV/FindWork?Offset=0&SortValue=CreationDate;19913;200;True;
+2;mapping_categories;requests;1597358516.6464975;-0.09227728843688965;https://www.trustpilot.com/categories;https://www.trustpilot.com/categories;237017;200;True;
+3;mapping_categories;requests;1597358560.4364693;-0.018590211868286133;https://www.trustpilot.com/categories;https://www.trustpilot.com/categories;237017;200;True;
+4;mapping_categories;requests;1597358569.3984048;-0.01193857192993164;https://www.trustpilot.com/categories;https://www.trustpilot.com/categories;237017;200;True;
+5;mapping_categories;requests;1597358577.5936694;-0.01714777946472168;https://www.trustpilot.com/categories;https://www.trustpilot.com/categories;237017;200;True;
