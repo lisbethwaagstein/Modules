@@ -1,0 +1,15 @@
+id;project;connector_type;t;delta_t;url;redirect_url;response_size;response_code;success;error
+0;categories;requests;1597329164.9366703;-0.88350510597229;https://www.basketball-reference.com/leagues/NBA_2018.html.;https://www.basketball-reference.com/leagues/NBA_2018.html.;82122;404;True;
+1;nba;requests;1597329211.153928;-0.28618311882019043;https://www.basketball-reference.com/leagues/NBA_2018.html;https://www.basketball-reference.com/leagues/NBA_2018.html;672304;200;True;
+2;nba;requests;1597332574.417586;-0.9633383750915527;https://www.basketball-reference.com/leagues/NBA_2018.html;https://www.basketball-reference.com/leagues/NBA_2018.html;672304;200;True;
+3;nba;requests;1597332603.892729;-0.25722455978393555;https://www.basketball-reference.com/leagues/NBA_2018.html;https://www.basketball-reference.com/leagues/NBA_2018.html;672304;200;True;
+4;nba;requests;1597332759.6209168;-0.23181509971618652;https://www.basketball-reference.com/leagues/NBA_2018.html;https://www.basketball-reference.com/leagues/NBA_2018.html;672304;200;True;
+5;nba;requests;1597333199.5463414;-0.8546910285949707;https://www.basketball-reference.com/leagues/NBA_2018.html;https://www.basketball-reference.com/leagues/NBA_2018.html;672304;200;True;
+6;nba;requests;1597333255.0053754;-0.25324225425720215;https://www.basketball-reference.com/leagues/NBA_2018.html;https://www.basketball-reference.com/leagues/NBA_2018.html;672304;200;True;
+7;nba;requests;1597333275.8847644;-0.27517223358154297;https://www.basketball-reference.com/leagues/NBA_2018.html;https://www.basketball-reference.com/leagues/NBA_2018.html;672304;200;True;
+8;nba;requests;1597333341.844421;-0.25223827362060547;https://www.basketball-reference.com/leagues/NBA_2018.html;https://www.basketball-reference.com/leagues/NBA_2018.html;672304;200;True;
+9;nba;requests;1597333345.105562;-0.24833416938781738;https://www.basketball-reference.com/leagues/NBA_2018.html;https://www.basketball-reference.com/leagues/NBA_2018.html;672304;200;True;
+10;nba;requests;1597333725.9847417;-0.835092306137085;https://www.basketball-reference.com/leagues/NBA_2018.html;https://www.basketball-reference.com/leagues/NBA_2018.html;672304;200;True;
+11;nba;requests;1597333746.6403892;-0.2899613380432129;https://www.basketball-reference.com/leagues/NBA_2018.html;https://www.basketball-reference.com/leagues/NBA_2018.html;672304;200;True;
+12;nba;requests;1597340839.3798447;-0.6322205066680908;https://www.basketball-reference.com/leagues/NBA_2018.html;https://www.basketball-reference.com/leagues/NBA_2018.html;672304;200;True;
+13;nba;requests;1597341306.34307;-0.5733816623687744;https://www.basketball-reference.com/leagues/NBA_2018.html;https://www.basketball-reference.com/leagues/NBA_2018.html;672304;200;True;
