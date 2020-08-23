@@ -1380,3 +1380,6 @@ id;project;connector_type;t;delta_t;url;redirect_url;response_size;response_code
 21;map_geo;requests;1598135161.443905;-0.6196534633636475;https://www.jobindex.dk/jobsoegning;https://www.jobindex.dk/jobsoegning;222910;200;True;
 22;map_geo;requests;1598135264.5595992;-0.634648323059082;https://www.jobindex.dk/jobsoegning;https://www.jobindex.dk/jobsoegning;222910;200;True;
 23;map_geo;requests;1598135321.272899;-0.5526552200317383;https://www.jobindex.dk/jobsoegning;https://www.jobindex.dk/jobsoegning;222910;200;True;
+3;map_geo;requests;1598175309.4155285;-0.6629257202148438;https://www.jobindex.dk/jobsoegning;https://www.jobindex.dk/jobsoegning;220299;200;True;
+4;map_geo;requests;1598175326.3053696;-0.8570024967193604;https://www.jobindex.dk/jobsoegning;https://www.jobindex.dk/jobsoegning;220299;200;True;
+5;map_geo;requests;1598175334.3527462;-0.5681436061859131;https://www.jobindex.dk/jobsoegning;https://www.jobindex.dk/jobsoegning;220299;200;True;
