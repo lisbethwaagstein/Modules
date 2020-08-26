@@ -1383,3 +1383,6 @@ id;project;connector_type;t;delta_t;url;redirect_url;response_size;response_code
 3;map_geo;requests;1598175309.4155285;-0.6629257202148438;https://www.jobindex.dk/jobsoegning;https://www.jobindex.dk/jobsoegning;220299;200;True;
 4;map_geo;requests;1598175326.3053696;-0.8570024967193604;https://www.jobindex.dk/jobsoegning;https://www.jobindex.dk/jobsoegning;220299;200;True;
 5;map_geo;requests;1598175334.3527462;-0.5681436061859131;https://www.jobindex.dk/jobsoegning;https://www.jobindex.dk/jobsoegning;220299;200;True;
+6;searchpage;requests;1598395414.5674634;-2.516680955886841;https://www.jobindex.dk/jobsoegning?lang=da?page=1.html;https://www.jobindex.dk/jobsoegning?lang=da?page=1.html;220531;200;True;
+7;searchpage;requests;1598411020.863369;-1.4379029273986816;https://www.jobindex.dk/jobsoegning?maxdate=20200826&mindate=20200526&jobage=archive;https://www.jobindex.dk/jobsoegning?maxdate=20200826&mindate=20200526&jobage=archive;212327;200;True;
+8;job postings;requests;1598427500.695739;-1.6755688190460205;https://www.jobindex.dk/jobsoegning?maxdate=20100331&mindate=20100101&page=1&jobage=archive;https://www.jobindex.dk/jobsoegning?maxdate=20100331&mindate=20100101&page=1&jobage=archive;220573;200;True;

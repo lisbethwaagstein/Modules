@@ -1,0 +1,278 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\lang danish
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2cm} {
+\backslash
+centering 
+\backslash
+Huge 
+\backslash
+textbf{Social Data Science} 
+\backslash
+
+\backslash
+ 
+\backslash
+textbf{Summerschool 2020} 
+\backslash
+
+\backslash
+[1cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+Group 10
+\backslash
+
+\backslash
+[2.cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+Investigating the expansion of remote work in the Danish labour market 
+\backslash
+
+\backslash
+[2.5cm]}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Total number of characters:  } 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+Our project aims to investigate the expansion/development of remote work
+ in the Danish labour market (possibly 2008-2020) using data joblistings
+ from jobindex.
+\end_layout
+
+\begin_layout Standard
+The first part of the project consists of a descriptive analysis of the
+ trend in remote job postings both in absolute numbers but also relative
+ to the total number of job postings.
+ This is done merely to confirm (at least superficially) the trend that
+ many media outlets and academics have foreseen whereby the option of working
+ remotely is becoming increasingly available.
+ This descriptive analysis will map the historic and current state of working
+ remotely in Denmark and provide a stepping stone for the second part of
+ the project, which aims to identify the scope of remote work in the future
+ by forecasting the trend in remote job postings overall and within different
+ industries - one could for example expect that jobs within the service
+ and hospitality industry cannot be fulfilled remotely.
+ The model is based on time series data and will be cross-validated using
+ different training and testing data (regularization needed?).
+ The prediction can help reveal the potential of remote work in the future.
+ Challenges: From looking around in Job Index, it seems that remote jobs
+ are a very small fraction of the total number of jobs advertised in Job
+ Index which might make the estimation/validation of our model.
+ However, this doesn’t make our model any less relevant/interest and if
+ remote job listings do continue to increase in the future, its calibration
+ can be improved.
+ Moreover, even without a model, our data would still allow us to make an
+ interesting descriptive analysis of the overall job market and how it has
+ been impacted by COVID-19, for example by looking into which types of jobs/indu
+stries/locations have seen the largest decreases in new postings compared
+ to previous years, etc.
+\end_layout
+
+\begin_layout Section*
+Theory
+\end_layout
+
+\begin_layout Section*
+Data
+\end_layout
+
+\begin_layout Standard
+We will obtain the data by scraping the job portal www.jobindex.dk for all
+ current and archived job postings.
+ We will then define some keywords (or expressions) such as “hjemmearbejde,
+ hjemmekontor, arbejde hjemmefra, etc” that we expect job postings where
+ working remotely is allowed (or encouraged) would contain.
+ We can search for these expressions in our job data and classify jobs into
+ remote/not remote.
+ The labeling model will be checked by random sample controls.
+ Our plan is to classify the job postings into job functions (preferable
+ DISCO-08 codes), industries (categories on jobindex) and geographical areas.
+ Job listings are interesting because they give us insight into the demand
+ side of the labor market (the employer) and their perception on the possibility
+ of employees working remotely, whereas many surveys usually focus on employees.
+ Further, we can see if there is a pattern in the words/phrases otherwise
+ used in “remote” job postings.
+\end_layout
+
+\begin_layout Standard
+# To obtain a more complete description, we scrape each of the links we
+ are redirected to when you click # on a job posting in Job-Index.
+ Using the text from these links, we can look for the remote keywords that
+ we will later define.
+ # We would also like to look at the most frequent words used in job postings
+ and how they change across idustries and time.
+ # However, the challenging part is that most of the time we are redirected
+ to the website outside of Job-Index.
+ Most of the # times it is the website of the company that has posted the
+ job, other times we are redirected to a PDF document.
+ # These websites and PDFs vary in the way they are constructed and it is
+ difficult to define a function that # can scrape the text related to the
+ job posting without also scraping unnecessary text like html codes or other
+ information # that companies include in their website.
+ Therefore, for this type of text analysis, we will use a small snippet
+ of the job # posting which job index includes in their listing of job postings.
+\end_layout
+
+\begin_layout Standard
+Ethical Considerations in data collection
+\end_layout
+
+\begin_layout Standard
+How do we define the remote job postings
+\end_layout
+
+\begin_layout Standard
+Cross validating the way the filter works
+\end_layout
+
+\begin_layout Section*
+Descriptive Analysis
+\end_layout
+
+\begin_layout Section*
+Forecasting
+\end_layout
+
+\begin_layout Section*
+Discussion Conclusion
+\end_layout
+
+\begin_layout Section*
+References
+\end_layout
+
+\end_body
+\end_document
