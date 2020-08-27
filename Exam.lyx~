@@ -195,25 +195,11 @@ The first part of the project consists of a descriptive analysis of the
 \end_layout
 
 \begin_layout Standard
-Challenges: From looking around in Job Index, it seems that remote jobs
- are a very small fraction of the total number of jobs advertised in Job
- Index which might make the estimation/validation of our model.
- However, this doesn’t make our model any less relevant/interest and if
- remote job listings do continue to increase in the future, its calibration
- can be improved.
- Moreover, even without a model, our data would still allow us to make an
- interesting descriptive analysis of the overall job market and how it has
- been impacted by COVID-19, for example by looking into which types of jobs/indu
-stries/locations have seen the largest decreases in new postings compared
- to previous years, etc.
-\end_layout
 
-\begin_layout Standard
-xxxxx
-\end_layout
-
-\begin_layout Standard
-Short literature review: What do we know about the expansion of remote jobs?
+\series bold
+Short literature review: 
+\series default
+What do we know about the expansion of remote jobs?
 \end_layout
 
 \begin_layout Standard
@@ -275,16 +261,16 @@ Højbjerre Brauer Schultz
 The paper is structured as follows:
 \end_layout
 
+\begin_layout Standard
+Job listings are interesting because they give us insight into the demand
+ side of the labor market (the employer) and their perception on the possibility
+ of employees working remotely, whereas many surveys usually focus on employees.
+ Further, we can see if there is a pattern in the words/phrases otherwise
+ used in “remote” job postings.
+\end_layout
+
 \begin_layout Section*
 Theory and methodology
-\end_layout
-
-\begin_layout Standard
-k-means?
-\end_layout
-
-\begin_layout Standard
-forecasting? 2 layer cross-validation.
 \end_layout
 
 \begin_layout Section*
@@ -300,9 +286,56 @@ Data collection
 \end_layout
 
 \begin_layout Standard
-We will obtain the data by scraping the job portal www.jobindex.dk for all
- current and archived job postings.
- We will then define some keywords (or expressions) such as “hjemmearbejde,
+For this project, we will scrape job listings from the Danish job portal
+ Jobindex in the period 2015-2020.
+ More specifically, we will scrape the job title, company, and a preview
+ of the full job listing.
+ These are all available on the search results page (see Figure 1).
+ Ideally, we would have liked to scrape the full job listing.
+ However, doing so would require scraping not only Jobindex but also different
+ company websites and PDF with varying HTML structure and although we wrote
+ a program for this, running it would take more time than what we had available
+ for the project.
+ It is due to these same time constraints that we decided not to extend
+ the period sample any further.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Standard job listing in Jobindex
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Job_box.PNG
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We will then define some keywords (or expressions) such as “hjemmearbejde,
  hjemmekontor, arbejde hjemmefra, etc” that we expect job postings where
  working remotely is allowed (or encouraged) would contain.
  We can search for these expressions in our job data and classify jobs into
@@ -310,30 +343,6 @@ We will obtain the data by scraping the job portal www.jobindex.dk for all
  The labeling model will be checked by random sample controls.
  Our plan is to classify the job postings into job functions (preferable
  DISCO-08 codes), industries (categories on jobindex) and geographical areas.
- Job listings are interesting because they give us insight into the demand
- side of the labor market (the employer) and their perception on the possibility
- of employees working remotely, whereas many surveys usually focus on employees.
- Further, we can see if there is a pattern in the words/phrases otherwise
- used in “remote” job postings.
-\end_layout
-
-\begin_layout Standard
-# To obtain a more complete description, we scrape each of the links we
- are redirected to when you click # on a job posting in Job-Index.
- Using the text from these links, we can look for the remote keywords that
- we will later define.
- # We would also like to look at the most frequent words used in job postings
- and how they change across idustries and time.
- # However, the challenging part is that most of the time we are redirected
- to the website outside of Job-Index.
- Most of the # times it is the website of the company that has posted the
- job, other times we are redirected to a PDF document.
- # These websites and PDFs vary in the way they are constructed and it is
- difficult to define a function that # can scrape the text related to the
- job posting without also scraping unnecessary text like html codes or other
- information # that companies include in their website.
- Therefore, for this type of text analysis, we will use a small snippet
- of the job # posting which job index includes in their listing of job postings.
 \end_layout
 
 \begin_layout Subsection*
@@ -349,26 +358,149 @@ The job postings from Jobindex are publicly available.
  Jobindex also keeps an archive of old job postings.
 \end_layout
 
-\begin_layout Subsection*
-Labeling of remote job postings
-\end_layout
-
 \begin_layout Standard
-We define a remote job posting by the words:
+Ideally, we would have liked to scrape all job listings in Jobindex for
+ the period 2008-2012.
 \end_layout
 
 \begin_layout Subsection*
 Sample controls
 \end_layout
 
-\begin_layout Standard
-So how does our webscraping work? Do we need to make adjustments? How many
- r
+\begin_layout Subsubsection*
+Validating the accuracy of our keywords in identifying remote listings
 \end_layout
 
 \begin_layout Standard
-(Cross) validating the way the filter works.
- Sample control!
+The way we identify remote job listings is by defining a list of keywords
+ that we think would be mentioned in a job listing offering the possibility
+ of working from home.
+ These set of keywords is ['hjemmekontor', 'hjemmearbejde', 'fjernarbejde',
+ 'arbejde hjemmefra', 'arbejde hjemme', 'remote arbejdsplads','remote work',
+ 'work remotely', 'working remotely','working from home', 'home office',
+ 'home-office'].
+ To have an idea of whether we are in fact identifying remote jobs, we draw
+ three random samples consisting of 10 job listings each.
+ For each of these listings we go into Jobindex and read the full job descriptio
+n to check whether the possbility of working remotely is actually mentioned.
+ The accuracy of our search filter can be seen below.
+ It is worth mentioning that we could only rule out the possibility of 3
+ out of 6 job listings being remote that we counted as not being remote,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sample
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Accuracy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -379,7 +511,8 @@ Descriptive Analysis
 This sections describes the development of job postings with the option
  of working remotely in the period 2008-2020.
  To our best knowledge, there does not currently exist an analysis of the
- remote labour market in Denmark, why we will describe this in details below.
+ remote labour market in Denmark, which is why we will describe this in
+ details below.
 \end_layout
 
 \begin_layout Standard
@@ -426,40 +559,7 @@ As described earlier, the potential for working remotely differs between
  filter the job postings according to the categories Information Technology,
  Engineering and technology, Management and staff, Trade and service, Industry
  and craft, Sales and communication, Teaching, Office and finance, Social
- and health and Other positions and more specific subcategories
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-See the categories at 
-\begin_inset CommandInset href
-LatexCommand href
-target "www.jobindex.dk/jobsoegning"
-literal "false"
-
-\end_inset
-
-.
- Ideally, we would like to have the job postings divided by industry according
- to the 
-\begin_inset CommandInset href
-LatexCommand href
-name "DB07"
-target "https://www.dst.dk/en/Statistik/dokumentation/nomenklaturer/dansk-branchekode-db07"
-literal "false"
-
-\end_inset
-
- statistical classification of economic activities.
- However, these do not correspond very well to the categories from Jobindex.
- Using the categories from Jobindex created no missing values, while trying
- to match DB07 classification based on the text in the job descriptions
- created many missing values.
-\end_layout
-
-\end_inset
-
-.
+ and health and Other positions and more specific subcategories.
 \end_layout
 
 \begin_layout Standard
@@ -514,15 +614,322 @@ ly provided a shock to the demand for remote work in a way not seen before.
 \end_layout
 
 \begin_layout Subsection*
-K-means: top words used in remote job postings
+Text analysis
 \end_layout
 
 \begin_layout Standard
-Tables....
+In this section we wanted to identify the most common words in those job
+ listings that we classified as 
+\begin_inset Quotes eld
+\end_inset
+
+remote
+\begin_inset Quotes erd
+\end_inset
+
+.
+ For this, we had to preprocess and tokenize all of the text in the short
+ descriptions.
+ Since our job listings included both texts in Danish and English, we made
+ use of a language detector package that allowed us to split the dataset
+ according to language.
+ We also got rid of symbols, numbers and punctuation, set all text to lowercase,
+ and removed stopwords in Danish and English respectively.
+ We tried using the Snowball stemmer since it has features for both Danish
+ and English but we found that it shortened words unnecessarily and it didn't
+ change our overall results.
+ When we started looking at word frequency across texts, we found multiple
+ words that had a high frequency but which didn't provide any meaningful
+ insights and so we went back and removed them.
 \end_layout
 
 \begin_layout Standard
-Wordcloud?
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Top 10 most mentioned words in remote job postings 2015-2020
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Danish
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+English
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nye
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+København/Copenhagen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Salg/Sælger
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sales
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+København
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Manager
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Manager
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Team
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Udvikling/Udvikle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Business
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hub
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Team
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+New
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Erfaring
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Developer/Development
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Samarbejde
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Customer/Customers
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Skabe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Support
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7209 remote job postings
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2162 remote job postings
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Job Functions
 \end_layout
 
 \begin_layout Section*
