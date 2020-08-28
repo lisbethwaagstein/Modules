@@ -451,6 +451,19 @@ home-office
  and Technology, Management and Staff, Trade and Service, Industry and Craft,
  Sales and Communication, Teaching, Office and Finance, Social and Health
  and Other positions and more specific subcategories.
+ Moreover, the geographical which we will include in our data are: Capital
+ Area, North Zealand, Region Zealand, Funen, North Jutland, Central Jutland,
+ Sotuh Jutland, Bornholm and Denmark
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+We have excluded Greenland, Faroe Islands, and Foregin countries.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
@@ -469,6 +482,8 @@ Since the categories and locations provided in Jobindex's search filters
  we are randomly assigning one of the two categories and deleting the other
  one.
  Although this isn't ideal, it is the best solution we could come up with.
+ After these steps, we end up with a dataset consisting of 14717 job listings
+ in the period 2010-2020 where at least one of our remote keywords was mentioned.
 \end_layout
 
 \begin_layout Standard
@@ -515,26 +530,22 @@ Validating the accuracy of our keywords in identifying remote listings
 \end_layout
 
 \begin_layout Standard
-To have an idea of whether we are in fact identifying remote jobs, we draw
- three random samples consisting of 10 job listings each.
- For each of these listings we go into Jobindex and read the full job descriptio
-n to check whether the possbility of working remotely is actually mentioned.
- The accuracy of our search filter can be seen below.
- It is worth mentioning that most of the time, when we counted each test
- as a 
-\begin_inset Quotes eld
-\end_inset
-
-fail
-\begin_inset Quotes erd
-\end_inset
-
- it wasn't because we could actually verify that the job wasn't remote,
- but because we
-\end_layout
-
-\begin_layout Standard
-fairly robust across samples
+We would like to get an idea of how accurate our keywords are in identifying
+ remote job listings, ie.
+ whether our sample actually consists of job listings where working remotely
+ is advertised, or if it is capturing the keywords being used in other contexts.
+ To do so, we draw 5 random samples consisting of 10 job listings each.
+ For each listing, we go into Jobindex and read the full job description
+ to check whether the possbility of working remotely is actually mentioned.
+ The results of this exercise can be found in the table below.
+ Note that 80% of the joblistings we counted as fails weren't true fails,
+ but cases where we couldn't get access to the full job listing either due
+ to the link being broken or because Jobindex couldn't retrieve a copy of
+ the full job listing.
+ Despite this, we found that on average, we had correctly identified remote
+ job listings 80% of the time and the results were fairly robust across
+ samples, ranging from 70%-90% accuracy.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -542,13 +553,13 @@ fairly robust across samples
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Testing filter accuracy in identifying remote job listings
 \end_layout
 
 \end_inset
@@ -703,6 +714,16 @@ Accuracy
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+Source: Own calculations
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+Note: Each sample consists of 10 randomly selected job listings
 \end_layout
 
 \end_inset
