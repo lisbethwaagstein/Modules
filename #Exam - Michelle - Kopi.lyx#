@@ -249,6 +249,18 @@ The descriptive analysis confirms, that the option of working remotely is
  market and the skill level of the labor force, and may also require workplaces
  to formalize policies or guidelines for remote work to be a success in
  the long run.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Even though it seems that remote work will expand in the future, not all
+ jobs can be done remotely, and the potential for remote work therefore
+ higly depends on the composition of the labour market including skill levels
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -307,23 +319,7 @@ LISBETH In light of the COVID-19 pandemic, we characterize the current state
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-smallskip
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We collect the data on the period 2010-2020 by scraping the Danish jobportal
+We collect data on the period 2010-2020 by scraping the Danish jobportal
  Jobindex for job postings containing one or more words related to remote
  work from a list defined by ourselves.
  The data trends are explored descriptively and using text analysis.
@@ -344,7 +340,7 @@ status open
 
 
 \backslash
-smallskip
+medskip
 \end_layout
 
 \end_inset
@@ -434,7 +430,7 @@ New methods for obtaining text data such as job postings create new ways
 
 \begin_layout Standard
 The method of obtaining text data by websraping is a relatively new tool,
- but it can be powerful in gaining insight into formerly inaccessibe data
+ but it can be powerful in gaining insight into otherwise inaccessibe data
  sources.
  As an example, management consultants in Denmark have used text data from
  job postings to generate descriptive statistics about the development of
@@ -473,6 +469,22 @@ https://www.datascienceretreat.com/wp-content/uploads/2020/02/Salary-Prediction.
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 To our best knowledge, there does not currently exist analysis of the remote
  labour market in Denmark using data from job postings.
  Thus, this paper's contribution is to complement the picture of the remote
@@ -486,22 +498,6 @@ To our best knowledge, there does not currently exist analysis of the remote
  market and the skill level of the labor force, and may also require workplaces
  to formalize policies or guidelines for remote work to be a success in
  the long run.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-smallskip
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1238,7 +1234,7 @@ remote
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1845,17 +1841,53 @@ Discussion
 \end_layout
 
 \begin_layout Standard
-as expected from Copenhagen: OECD (2020) also provide an interesting point,
- that while big cities may suffer from a higher risk of fast spread of a
- disease like COVID-19 because of high population density, a greater potential
- for working from home can provide a source of resilience to the economic
- downturn following the COVID-19 crisis (OECD, 2020).
+From the descriptive analysis of data from 2020, is it apparent, that there
+ is a greater focus on remote work in light of the COVID-19 crisis.
+ The increase in the Capital Region and the presence of 
+\begin_inset Quotes eld
+\end_inset
+
+København/Copenhagen
+\begin_inset Quotes erd
+\end_inset
+
+ in the top 10 most mentioned words are especially in line with OECD (2020),
+ that big cities have a larger share of jobs, that can be performed remotely
+ and workplaces may be more likely to adjust to working remotely since there
+ is a higher risk of spread of disease.
+ It will be interesting to see if the economic downturn will be significantly
+ different in regions with more and less potential of remote work.
+ This motivates running the code for this project again at a later point
+ in time to update the development in remote jobs and evaluate past forecasts.
 \end_layout
 
 \begin_layout Standard
-sammenlign vores tal med disse: https://voxeu.org/article/potential-remote-workin
-g-across-different-places?fbclid=IwAR2zo04l-Hdlz9Tn2fCRCs4itnG7rI4_SwjenBl4XK5nW
-Ui2Y35yzCdQmmo
+We must also be careful with putting too much emphasis on datapoints from
+ a 6-month period, where the world has been turned upside down.
+ We have seen an increse in the number and share of job postings with the
+ option of working remotely during the COVID-19 pandemic, but we do not
+ yet know if this expansion will persist in the long run.
+ So far, the increased demand from the employers side is supported by politician
+s
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://politiken.dk/oekonomi/art7882631/Vi-skal-igen-til-at-arbejde-hjemme
+\end_layout
+
+\end_inset
+
+ and the employers' organisation, Confederation of Danish Industry (DI).
+ DI suggests, that companies formalize guidelines for remote work
+\end_layout
+
+\begin_layout Standard
+DI og politikere:
+\end_layout
+
+\begin_layout Standard
+......
 \end_layout
 
 \begin_layout Standard
