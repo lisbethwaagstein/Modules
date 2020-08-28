@@ -1953,6 +1953,19 @@ lly finds seasonal trends beneath the data and offers a set of parameters
 \end_layout
 
 \begin_layout Standard
+One of the many hidden secrets that is not so obvious when first using Prophet
+ is that it has a built-in cross validation function.
+ This function will take your data and train the model on a period you specify.
+ It will then predict a period that you also specify.
+ Prophet will then train your data on a bigger period, then predict again
+ and this will repeat until the end point is reached.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 Prophet :
 \end_layout
 
