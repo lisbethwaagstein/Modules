@@ -28,10 +28,11 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
+\paperfontsize 12
+\spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -44,6 +45,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -55,6 +57,10 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -310,7 +316,7 @@ For this project, we will scrape job listings from the Danish job portal
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -513,6 +519,7 @@ Data cleansing process
 
 \begin_inset Graphics
 	filename dataset_structure.PNG
+	scale 80
 
 \end_inset
 
@@ -556,7 +563,7 @@ We would like to get an idea of how accurate our keywords are in identifying
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -891,7 +898,7 @@ Figure 4
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -931,7 +938,7 @@ separation "3pt"
 shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Note: Share is calculated as (#remote job postings in category x/#total
@@ -1112,12 +1119,14 @@ backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
+\align center
 Note: Share is calculated as (#remote job postings in region x/#total job
  postings in region x).
- Data for 2020 only include the months Jan-Aug.
+ Data for 2020 only includes the months Jan-Aug.
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 Source: Data scraped from www.jobindex.dk/jobsoegning
 \end_layout
 
@@ -1893,31 +1902,54 @@ Forecasting as a COVID-19 counterfactual
 \end_layout
 
 \begin_layout Standard
+We will do two things
+\end_layout
+
+\begin_layout Standard
+1.
+ What would it have looked like if it wasnt for COVID 19
+\end_layout
+
+\begin_layout Standard
+2.
+ Now that COVID has happened what can we expect for the future
+\end_layout
+
+\begin_layout Standard
 As social scientists, we are often interested in estimating the treatment
- effect that different exogenous shocks such as changes in policy can have
- on variables on interest.
- In this case, the restrictions on mobility that governments' have imposed
-\end_layout
+ effect that different exogenous shocks such as policy changes can have
+ on different variables on interest.
+ Although the development in remote job listings for 2020 doesn't particularly
+ stand out when compared to the rest of the sample, it is reasonable to
+ believe[INSERT SOME SOURCE] that the oubreak of the pandemic has forced
+ businesses to change the way they operate in order to adapt to the environment
+ of uncertainty regarding their employees' mobility.
+ In this case, the mobility restrictions imposed by governments' can be
+ seen as an exogenous shock to the remote labour market and it is worth
+ questioning what the magnitude of the effect of this shock is.
+ Ideally, we would like to observe our outcome (remote job listings) in
+ both state of the worlds, that is, both with and without the presence of
+ COVID-19.
+ Although this is impossible, fitting a model using data for the period
+ prior to the pandemic and making a forecast for 2020 could provide us with
+ an artificial counterfactual to the actual development of remote job listings.
+ Notice that the purpose of this exercise is not to formally estimate the
+ true causal effect of COVID-19 on remote work, but rather to motivate and
+ challenge future research into the potential that policy changes have on
+ rearranging the incentives in the labour market.
+ Since we have univariate time series data, for our forecasting we chose
+ to use the Prophet algorithm developed by Facebook since it is considered
+ to perform well in modelling data with seasonal effects
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-2"
+literal "false"
 
-\begin_layout Standard
-Ideally, we would like to observe our outcome (remote job listings) in both
- state of the worlds, that is, both with and without the presence of COVID-19.
-\end_layout
+\end_inset
 
-\begin_layout Standard
-it is worth asking exactly how big of an eect did the breakout of , which
- is most likely due to the outbreak of COVID-19 forcing compaanies and employer'
-s to rethink To get an idea of the magnitude of the impact COVID-19 has
- had on the number of remote jobs, it would be interesting to forecast how
- the trend in remote job listings would have looked like had it not been
- for the outbreak of the pand
-\end_layout
-
-\begin_layout Standard
-As we observed in the descriptive analysis, although there is clearly an
- upward trend in the number of monthly remote job listings for our whole
- sample period, the overall increase generated in 2020 as a result of the
- COVID-19 pandemic
+ and shifts in trends.Part of the attractiveness of Prophet is that it automatica
+lly finds seasonal trends beneath the data and offers a set of parameters
+ that are easy to understand and can be calibrated accordingly.
 \end_layout
 
 \begin_layout Standard
@@ -1925,15 +1957,24 @@ Prophet :
 \end_layout
 
 \begin_layout Standard
-Bayesian based curve fitting method to forecast the time series data.
- The cool thing about Prophet is that it doesn’t require much prior knowledge
- or experience of forecasting time series data since it automatically finds
- seasonal trends beneath the data and offers a set of ‘easy to understand’
- parameters.
+Linear growth
 \end_layout
 
 \begin_layout Standard
-emic.
+Bayesian based curve fitting method to forecast the time series data.
+\end_layout
+
+\begin_layout Standard
+built-in cross validation function
+\end_layout
+
+\begin_layout Standard
+One of the many hidden secrets that is not so obvious when first using Prophet
+ is that it has a built-in cross validation function.
+ This function will take your data and train the model on a period you specify.
+ It will then predict a period that you also specify.
+ Prophet will then train your data on a bigger period, then predict again
+ and this will repeat until the end point is reached.
 \end_layout
 
 \begin_layout Standard
@@ -1941,7 +1982,7 @@ emic.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1966,6 +2007,28 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+This parameter is the easiest to understand and implement as you only have
+ to plot your data to know what it should be.
+ If you plot your data and you see a trend that keeps on growing with no
+ real saturation insight (or if your domain expert tells you there is no
+ saturation to worry about) you will set this parameter to “linear”.
+\end_layout
+
+\begin_layout Standard
+We choose linear growth
+\end_layout
+
+\begin_layout Standard
+Prophet is a procedure for forecasting time series data based on an additive
+ model where non-linear trends are fit with yearly, weekly, and daily seasonalit
+y, plus holiday effects.
+ It works best with time series that have strong seasonal effects and several
+ seasons of historical data.
+ Prophet is robust to missing data and shifts in the trend, and typically
+ handles outliers well.
 \end_layout
 
 \begin_layout Section*
@@ -2009,11 +2072,19 @@ emotely-is-helping-women-close-the-gender-gap-in-tech/#16dcf1974ea7
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-3"
+key "key-4"
 
 \end_inset
 
-
+Smialek, J.
+ (2015, March 13) Want a New Job? Game These Seasonal Trends in the U.S.
+ 
+\shape italic
+Bloomberg.
+ 
+\shape default
+Retrieved from bloomberg.com/news/articles/2015-12-17/want-a-new-job-game-these-s
+easonal-trends-in-the-u-s-
 \end_layout
 
 \end_body
