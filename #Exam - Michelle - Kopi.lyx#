@@ -211,6 +211,46 @@ references!
 
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Abstract: 
+\series default
+The spread of COVID-19 has forced governments to impose restrictions on
+ the mobility of citizens' to minimize the risk of infection.
+ This has led researchers and several news media to speculate about whether
+ working remotely will be the new normal.
+ In this project, we scrape data from job postings published to the Danish
+ jobportal Jobindex to 
+\shape italic
+investigate the development of remote work in Denmark over the period 2010-2020
+\shape default
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We explore and characterize the development both overall and across different
+ job categories and geographical areas.
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+LISBETH.
+ 
+\series default
+The descriptive analysis confirms, that the option of working remotely is
+ becoming increasingly available, and global pandemic seems to have created
+ a wave for workplaces to ride on with.
+ The potential for remote work is dependant on the composition of the labour
+ market and the skill level of the labor force, and may also require workplaces
+ to formalize policies or guidelines for remote work to be a success in
+ the long run.
+\end_layout
+
 \begin_layout Section*
 Introduction
 \end_layout
@@ -286,21 +326,14 @@ smallskip
 We collect the data on the period 2010-2020 by scraping the Danish jobportal
  Jobindex for job postings containing one or more words related to remote
  work from a list defined by ourselves.
- The webscrape includes job title, company, publication date and a preview
- of the full job listing as well as a job category and geographical area.
- To our best knowledge, there does not currently exist such an analysis
- of the remote labour market in Denmark, and we therefore explore and characteri
-ze the trends both overall and across different job categories and geographical
- areas in detail.
+ The data trends are explored descriptively and using text analysis.
 
 \series bold
  LISBETH Further, we use a subset of the dataset from 2010-2019 to forecast
  the counterfactual....Forecast! The model is based on time series data and
  is cross-validated using different training and testing data.
- 
-\series default
-The prediction reveal the development in the remote labour market that we
- could have expected without the outbreak of COVID-19.
+ The prediction reveal the development in the remote labour market that
+ we could have expected without the outbreak of COVID-19.
 \end_layout
 
 \begin_layout Standard
@@ -396,12 +429,17 @@ New methods for obtaining text data such as job postings create new ways
 
 \end_inset
 
-Obtaining text data by websraping is a relatively new tool, but it can be
- powerful in gaining insight into formerly inaccessibe data sources.
+
+\end_layout
+
+\begin_layout Standard
+The method of obtaining text data by websraping is a relatively new tool,
+ but it can be powerful in gaining insight into formerly inaccessibe data
+ sources.
  As an example, management consultants in Denmark have used text data from
  job postings to generate descriptive statistics about the development of
- demand in labour analyse labour demand within the two industries IT and
- telecommunications and and the iron, metal and auto sectors
+ demand in labour within the two industries IT and telecommunications and
+ and the iron, metal and auto sectors
 \begin_inset Foot
 status collapsed
 
@@ -410,13 +448,16 @@ https://www.hbseconomics.dk/publications/analysis-of-labour-demand-using-job-pos
 ngs/?fbclid=IwAR0VGB0_9mB7hLlhC77m8wzh_TO2Y2OO9JkRFMOfPCBDZZl1Y98Pw4X-Fkg
 \end_layout
 
+\begin_layout Plain Layout
+eller Højbjerre Brauer Schultz (2016): "Analyse af arbejdskraftefterspørgslen
+ ved hjælp af jobopslag".
+\end_layout
+
 \end_inset
 
 .
- The data is used within the two case areas.
  Other projects include feeding job descriptions to a machine learning model
- to estimate appropriate salary and gain insights into salaries and skills
- by role type and location
+ to estimate appropriate salary
 \begin_inset Foot
 status collapsed
 
@@ -432,21 +473,19 @@ https://www.datascienceretreat.com/wp-content/uploads/2020/02/Salary-Prediction.
 \end_layout
 
 \begin_layout Standard
-......
-\end_layout
-
-\begin_layout Standard
-This paper's contribution will be to complement the picture of the remote
+To our best knowledge, there does not currently exist analysis of the remote
+ labour market in Denmark using data from job postings.
+ Thus, this paper's contribution is to complement the picture of the remote
  labour market which has already been painted by previous research with
  the insights from the Danish labor market.
- The overall impression from the descriptive analysis confirms what media
- outlets and academics have foreseen; the option of working remotely is
- becoming increasingly available, and global pandemic seems to have created
- a wave for workplaces to ride on with.
- The potential for remote work is higly dependant on the composition of
- the labour market and the skill level of the labor force, and may also
- require workplaces to formalize policies or guidelines for remote work
- to be a success in the long run.
+ The descriptive analysis confirms what media outlets and academics have
+ foreseen; the option of working remotely is becoming increasingly available,
+ and global pandemic seems to have created a wave for workplaces to ride
+ on with.
+ The potential for remote work is dependant on the composition of the labour
+ market and the skill level of the labor force, and may also require workplaces
+ to formalize policies or guidelines for remote work to be a success in
+ the long run.
 \end_layout
 
 \begin_layout Standard
@@ -1832,7 +1871,7 @@ Discussion: If jobindex had a filter for “Fjernarbejde”, we could evaluate
  job postings, because the links are not working).
  Why do we want to KNOW this forecasting/prediction? What is the demand
  for people working remotely.
- We know a lot about how many people are jobless.
+ brug til at lave en filter i jobindex
 \end_layout
 
 \begin_layout Standard
@@ -1867,7 +1906,9 @@ d=IwAR2zo04l-Hdlz9Tn2fCRCs4itnG7rI4_SwjenBl4XK5nWUi2Y35yzCdQmmo
 \end_layout
 
 \begin_layout Standard
-brug til at lave en filter i jobindex
+HBS: Based on the company name, data is then linked to the Central Business
+ register, where additional information is extracted about the size, industry
+ and geographical location of the company.
 \end_layout
 
 \begin_layout Section*
