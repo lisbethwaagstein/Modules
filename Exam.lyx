@@ -466,6 +466,14 @@ We have excluded Greenland, Faroe Islands, and Foregin countries.
 
 \end_layout
 
+\begin_layout Standard
+Lastly, to put the development in remote job listings into perspective,
+ we will also need data for the total monthly job listings for the period
+ 2010-2020 across categories and geographical areas.
+ For this we change the search filters accordingly and scrape the total
+ number of jobs that match our search.
+\end_layout
+
 \begin_layout Subsection*
 Data cleansing
 \end_layout
@@ -504,15 +512,10 @@ Data cleansing process
 
 
 \begin_inset Graphics
-	filename Modules/dataset_structure.PNG
-	scale 55
+	filename dataset_structure.PNG
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -553,7 +556,7 @@ We would like to get an idea of how accurate our keywords are in identifying
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -718,12 +721,37 @@ Accuracy
 
 \begin_layout Plain Layout
 \align center
-Source: Own calculations
-\end_layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "12cm"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 Note: Each sample consists of 10 randomly selected job listings
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+Source: Own calculations
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -769,7 +797,7 @@ Remote and total job postings published on Jobindex, 2010-2020
 
 
 \begin_inset Graphics
-	filename ../../../../OneDrive/11. Semester/Social Data Science/Modules/fig1a.png
+	filename fig1a.png
 	width 12cm
 
 \end_inset
@@ -877,7 +905,7 @@ Percentage remote job postings of total split into categories, 2010-2020
 
 
 \begin_inset Graphics
-	filename ../../../../OneDrive/11. Semester/Social Data Science/Modules/fig1b.png
+	filename fig1b.png
 	width 12cm
 
 \end_inset
@@ -1048,14 +1076,14 @@ Percentage remote job postings of total per Danish region, 2010 and 2020
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../../OneDrive/11. Semester/Social Data Science/Modules/area_map2010.PNG
+	filename area_map2010.PNG
 	width 6cm
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename ../../../../OneDrive/11. Semester/Social Data Science/Modules/area_map2020.PNG
+	filename area_map2020.PNG
 	width 6cm
 
 \end_inset
@@ -1121,6 +1149,7 @@ Considering the map of 2010, we find that between 0.61 and 0.8 pct.
  In light of the COVID-19 pandemic, where the spread of the disease is sensitive
  to the population density, it seems that workplaces in the Capital Region
  contemplate the risk of disease into their working policies.
+ *WHEN HIRING NEW EMPLOYEES.
 \end_layout
 
 \begin_layout Subsection*
