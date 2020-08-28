@@ -396,17 +396,12 @@ New methods for obtaining text data such as job postings create new ways
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-The method of obtaining text data by websraping is a relatively new tool,
- but it can be powerful in gaining insight into formerly inaccessibe data
- sources.
+Obtaining text data by websraping is a relatively new tool, but it can be
+ powerful in gaining insight into formerly inaccessibe data sources.
  As an example, management consultants in Denmark have used text data from
  job postings to generate descriptive statistics about the development of
- demand in labour within the two industries IT and telecommunications and
- and the iron, metal and auto sectors
+ demand in labour analyse labour demand within the two industries IT and
+ telecommunications and and the iron, metal and auto sectors
 \begin_inset Foot
 status collapsed
 
@@ -418,8 +413,10 @@ ngs/?fbclid=IwAR0VGB0_9mB7hLlhC77m8wzh_TO2Y2OO9JkRFMOfPCBDZZl1Y98Pw4X-Fkg
 \end_inset
 
 .
+ The data is used within the two case areas.
  Other projects include feeding job descriptions to a machine learning model
- to estimate appropriate salary
+ to estimate appropriate salary and gain insights into salaries and skills
+ by role type and location
 \begin_inset Foot
 status collapsed
 
@@ -435,10 +432,13 @@ https://www.datascienceretreat.com/wp-content/uploads/2020/02/Salary-Prediction.
 \end_layout
 
 \begin_layout Standard
-This paper's contribution to the literature on using data from job postings
- will be to complement the picture of the remote labour market which has
- already been painted by previous research with the insights from the Danish
- labor market.
+......
+\end_layout
+
+\begin_layout Standard
+This paper's contribution will be to complement the picture of the remote
+ labour market which has already been painted by previous research with
+ the insights from the Danish labor market.
  The overall impression from the descriptive analysis confirms what media
  outlets and academics have foreseen; the option of working remotely is
  becoming increasingly available, and global pandemic seems to have created

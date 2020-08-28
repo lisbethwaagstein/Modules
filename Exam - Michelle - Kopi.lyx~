@@ -245,7 +245,7 @@ smallskip
 \begin_layout Standard
 In this project, we use data from job postings to 
 \shape italic
-investigate the development in remote work in Denmark over the period 2010-2020
+investigate the development of remote work in Denmark over the period 2010-2020
 \shape default
 .
  
@@ -261,8 +261,8 @@ We explore and characterize the development both overall and across different
 
  
 \series bold
-In light of the COVID-19 pandemic, we characterize the current state of
- remote work in Danmark and forecast the counterfactual of the pandemic
+LISBETH In light of the COVID-19 pandemic, we characterize the current state
+ of remote work in Danmark and forecast the counterfactual of the pandemic
  using machine learning.
 \end_layout
 
@@ -294,9 +294,9 @@ ze the trends both overall and across different job categories and geographical
  areas in detail.
 
 \series bold
- Further, we use a subset of the dataset from 2010-2019 to forecast the
- counterfactual....Forecast! The model is based on time series data and is cross-val
-idated using different training and testing data.
+ LISBETH Further, we use a subset of the dataset from 2010-2019 to forecast
+ the counterfactual....Forecast! The model is based on time series data and
+ is cross-validated using different training and testing data.
  
 \series default
 The prediction reveal the development in the remote labour market that we
@@ -320,8 +320,8 @@ smallskip
 \end_layout
 
 \begin_layout Standard
-While COVID-19 has led to renewed interest in the remote labour market the
- topic has been studied before.
+While COVID-19 has led to a renewed interest in the remote labour market,
+ the topic has been studied before.
  A recent study by Dingel & Neiman (2020)
 \begin_inset Foot
 status collapsed
@@ -333,9 +333,9 @@ Dingel, J and B Neiman (2020), “How Many Jobs Can be Done at Home?”, Covid
 
 \end_inset
 
- explores how many can actually be performed at home by creating a classificatio
-n measure from the O*NET survey, that estimates the extend to which an occupatio
-n can be performed entirely from home.
+ explores the potential of remote working by creating a classification measure
+ from the O*NET survey, that estimates the extend to which an occupation
+ can be performed entirely from home.
  The authors estimate, that 37 pct.
  of US jobs can plausibly be performed from home, including most jobs in
  finance, corporate management, and professional and scientific services.
@@ -385,13 +385,61 @@ In line with the referenced studies, most of the literature on remote work
  Job listings are interesting because they shed light on the demand side
  of the labour market, ie.
  the employer, and their perception on whether a job can be performed remotely.
- New methods for obtaining text data such as job postings create....
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+New methods for obtaining text data such as job postings create new ways
+ to do data analysis.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-This paper's contribution will be to complement the picture of the remote
- labour market which has already been painted by previous research with
- the insights from the Danish labor market.
+The method of obtaining text data by websraping is a relatively new tool,
+ but it can be powerful in gaining insight into formerly inaccessibe data
+ sources.
+ As an example, management consultants in Denmark have used text data from
+ job postings to generate descriptive statistics about the development of
+ demand in labour within the two industries IT and telecommunications and
+ and the iron, metal and auto sectors
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://www.hbseconomics.dk/publications/analysis-of-labour-demand-using-job-posti
+ngs/?fbclid=IwAR0VGB0_9mB7hLlhC77m8wzh_TO2Y2OO9JkRFMOfPCBDZZl1Y98Pw4X-Fkg
+\end_layout
+
+\end_inset
+
+.
+ Other projects include feeding job descriptions to a machine learning model
+ to estimate appropriate salary and gain insights into salaries and skills
+ by role type and location
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://www.datascienceretreat.com/wp-content/uploads/2020/02/Salary-Prediction.pdf.
+ Note that this type of analysis requires job posting data including a salary
+ level.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This paper's contribution to the literature on using data from job postings
+ will be to complement the picture of the remote labour market which has
+ already been painted by previous research with the insights from the Danish
+ labor market.
  The overall impression from the descriptive analysis confirms what media
  outlets and academics have foreseen; the option of working remotely is
  becoming increasingly available, and global pandemic seems to have created
@@ -1813,6 +1861,14 @@ furhter research: explore different job functions.
  steps.
  https://voxeu.org/article/potential-remote-working-across-different-places?fbcli
 d=IwAR2zo04l-Hdlz9Tn2fCRCs4itnG7rI4_SwjenBl4XK5nWUi2Y35yzCdQmmo
+\end_layout
+
+\begin_layout Standard
+....
+\end_layout
+
+\begin_layout Standard
+brug til at lave en filter i jobindex
 \end_layout
 
 \begin_layout Section*
