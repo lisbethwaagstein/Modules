@@ -115,7 +115,8 @@ Group 10
 
 \begin_layout Plain Layout
 
-Investigating the expansion of remote work in the Danish labour market 
+The Future of Work? Investigating the development of remote work in the
+ Danish labour market 
 \backslash
 
 \backslash
@@ -485,8 +486,8 @@ medskip
 \end_layout
 
 \begin_layout Standard
-To our best knowledge, there does not currently exist analysis of the remote
- labour market in Denmark using data from job postings.
+To our best knowledge, there does not currently exist an analysis of the
+ remote labour market in Denmark using data from job postings.
  Thus, this paper's contribution is to complement the picture of the remote
  labour market which has already been painted by previous research with
  the insights from the Danish labor market.
@@ -509,10 +510,6 @@ The rest of the paper is structured as follows: Section 2 describes the
 g of the remote labour market in absence of COVID-19 in Section 5.
  Section 6 discusses results, strenghts and weaknesses, further research
  on this topis and ends with a conclusion on the project.
-\end_layout
-
-\begin_layout Section*
-Theory and methodology
 \end_layout
 
 \begin_layout Section*
@@ -1797,6 +1794,10 @@ Specialist
 \end_layout
 
 \begin_layout Section*
+Theory and methodology
+\end_layout
+
+\begin_layout Section*
 Forecasting as a COVID-19 counterfactual
 \end_layout
 
@@ -1837,12 +1838,12 @@ status open
 \end_layout
 
 \begin_layout Section*
-Discussion
+Discussion and conclusion
 \end_layout
 
 \begin_layout Standard
 From the descriptive analysis of data from 2020, is it apparent, that there
- is a greater focus on remote work in light of the COVID-19 crisis.
+ is a greater focus on remote work in light of the COVID-19 pandemic.
  The increase in the Capital Region and the presence of 
 \begin_inset Quotes eld
 \end_inset
@@ -1852,32 +1853,142 @@ København/Copenhagen
 \end_inset
 
  in the top 10 most mentioned words are especially in line with OECD (2020),
- that big cities have a large share of high-skilled workers in jobs, that
- can be performed remotely and workplaces may be more likely to adjust to
- working remotely since there is a higher risk of spread of disease.
+ that big cities have a larger share of jobs, that can be performed remotely
+ and workplaces may be more likely to adjust to working remotely since there
+ is a higher risk of spread of disease.
+ It will be interesting to see if the economic downturn will be significantly
+ different in regions with more and less potential of remote work, which
+ motivates running the code for this project again at a later point in time
+ to update the development in remote jobs and evaluate past forecasts.
 \end_layout
 
 \begin_layout Standard
-But we must also be careful with putting too much emphasis on datapoints
- from a 6-month period, where life as we know it, has been turned around.
+We must also be careful with putting too much emphasis on datapoints from
+ a 6-month period, where the world has been turned upside down.
+ We have seen an increse in the number and share of job postings with the
+ option of working remotely during the COVID-19 pandemic, but we do not
+ yet know if this expansion will persist in the long run.
+ So far, the increased demand from the employers side is supported by politician
+s
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://politiken.dk/oekonomi/art7882631/Vi-skal-igen-til-at-arbejde-hjemme
+\end_layout
+
+\end_inset
+
+ and the employers' organisation, Confederation of Danish Industry (DI).
+ DI recommend, that companies formalize guidelines for remote work and evaluate
+ continuously for this new way of working to be a success
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://www.danskindustri.dk/vi-radgiver-dig-ny/personale/personalejura/vilkar-und
+er-ansattelsen/personalepolitik/hjemmearbejde/
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-as expected from Copenhagen: OECD (2020) also provide an interesting point,
- that while big cities may suffer from a higher risk of fast spread of a
- disease like COVID-19 because of high population density, a greater potential
- for working from home can provide a source of resilience to the economic
- downturn following the COVID-19 crisis (OECD, 2020).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-sammenlign vores tal med disse: https://voxeu.org/article/potential-remote-workin
-g-across-different-places?fbclid=IwAR2zo04l-Hdlz9Tn2fCRCs4itnG7rI4_SwjenBl4XK5nW
-Ui2Y35yzCdQmmo
+Along with an expectation of remote work becoming more normal in the future
+ comes the convenience for job seekers to be able to look up job postings
+ with the option of remote work.
+ In this project we have scraped data from jobindex based on a list of words/phr
+ases linked to remote work defined by us, and on the basis of this list,
+ we have been able to label job postings as remote with an average accuracy
+ of 80 pct.
+ This provides an opportunity to create a filter/checkbox for 
+\begin_inset Quotes eld
+\end_inset
+
+Remote work
+\begin_inset Quotes erd
+\end_inset
+
+ on jobindex and other jobportals.
+ Such a checkbox is already implemented on www.careergate.dk, although it
+ does not seem to work properly when comparing the job postings in the filter
+ to the job postings occuring when searching for different versions of 
+\begin_inset Quotes eld
+\end_inset
+
+remote work
+\begin_inset Quotes erd
+\end_inset
+
+ in the search field
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+We take full responsibility of this statement, as it is solely based on
+ our own experience :-)
+\end_layout
+
+\end_inset
+
+.
+ This could indicate, that such a chechbox function should be driven by
+ data rather than humans publishing job postings.
 \end_layout
 
 \begin_layout Standard
-......
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given the contraint on time and pages, we had to limit the scope of the
+ project on different dimensions.
+ Initially, we set out to scrape all job postings from Jobindex over the
+ period 2008-2020, so we had a year prior to the global finansial crisis
+ to compare to 2019, the year before the COVID-19 crisis.
+ But as the program would have taken days to execute, we went with a smaller
+ dataset for this project.
+ However, the full dataset would still be interesting to obtain.
+ As the scraped text data is not perfect, we have taken many decisions along
+ the way.
+\end_layout
+
+\begin_layout Standard
+We have used the filters on Jobindex to obtain job category and area, but
+ since one job posting can be in more than one category and we have removed
+ duplicates, job postings are only caracterized with one job category.
+ Ideally, we would like the job category to follow the standard DB07 classificat
+ion, however
 \end_layout
 
 \begin_layout Standard
@@ -1897,19 +2008,25 @@ Discussion: If jobindex had a filter for “Fjernarbejde”, we could evaluate
 \end_layout
 
 \begin_layout Standard
-- Increasing demand/push: Arbejdsgiver organisation: https://www.danskindustri.dk/
-vi-radgiver-dig-ny/personale/personalejura/vilkar-under-ansattelsen/personalepol
-itik/hjemmearbejde/ + Virksomhedspanelet ang.
- hjemmearbejde and Political push: https://politiken.dk/oekonomi/art7882631/Vi-sk
-al-igen-til-at-arbejde-hjemme
-\end_layout
-
-\begin_layout Standard
-furhter research: explore different job functions.
+................further research: explore different job functions.
  maybe mostly highly educated will work from home? this is what they find
  in https://www.dallasfed.org/-/media/documents/research/papers/2020/wp2017.pdf.
  and OECD (2020): the potential of remote work increases with the overall
  skill level of the population.
+\end_layout
+
+\begin_layout Standard
+...................
+\end_layout
+
+\begin_layout Standard
+HBS: Based on the company name, data is then linked to the Central Business
+ register, where additional information is extracted about the size, industry
+ and geographical location of the company.
+\end_layout
+
+\begin_layout Standard
+-
 \end_layout
 
 \begin_layout Standard
@@ -1924,23 +2041,33 @@ d=IwAR2zo04l-Hdlz9Tn2fCRCs4itnG7rI4_SwjenBl4XK5nWUi2Y35yzCdQmmo
 \end_layout
 
 \begin_layout Standard
-....
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-HBS: Based on the company name, data is then linked to the Central Business
- register, where additional information is extracted about the size, industry
- and geographical location of the company.
-\end_layout
-
-\begin_layout Section*
-Conclusion
+.....
 \end_layout
 
 \begin_layout Standard
 Even though it seems that remote work will expand in the future, not all
  jobs can be done remotely, and the potential for remote work therefore
- higly depends on the composition of the labour market including skill levels
+ higly depends on the composition of the labour market.
+\end_layout
+
+\begin_layout Section*
+Conclusion
 \end_layout
 
 \begin_layout Section*
