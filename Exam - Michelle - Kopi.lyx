@@ -245,7 +245,7 @@ smallskip
 \begin_layout Standard
 In this project, we use data from job postings to 
 \shape italic
-investigate the development in remote work in Denmark over the period 2010-2020
+investigate the development of remote work in Denmark over the period 2010-2020
 \shape default
 .
  
@@ -385,9 +385,7 @@ In line with the referenced studies, most of the literature on remote work
  Job listings are interesting because they shed light on the demand side
  of the labour market, ie.
  the employer, and their perception on whether a job can be performed remotely.
- 
-\series bold
-beskriv højbjerre brauer schultz her?
+ New methods for obtaining text data such as job postings create....
 \end_layout
 
 \begin_layout Standard
@@ -426,15 +424,9 @@ The rest of the paper is structured as follows: Section 2 describes the
  Section 3 is a descriptive analysis of the remote labour market in Denmark
  including a text analysis of the job titles and descriptions.
  Section 4 explains theory and methods for forecasting, followed by a forecastin
-g of the remote labour market in absence of COVID-19 i Section 5.
- Section 6 discusses results, pitfalls, further research in this area and
- concludes on the project.
-\end_layout
-
-\begin_layout Subsection*
-
-\series bold
-Short literature review on remote work
+g of the remote labour market in absence of COVID-19 in Section 5.
+ Section 6 discusses results, strenghts and weaknesses, further research
+ on this topis and ends with a conclusion on the project.
 \end_layout
 
 \begin_layout Section*
