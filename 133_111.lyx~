@@ -701,11 +701,13 @@ medskip
 \end_layout
 
 \begin_layout Standard
-We have chosen Jobindex, because it includes not only the portals own job
+We have chosen Jobindex, because it includes not only the portal's own job
  postings, but also almost all publicly available job posting from other
  job portals and companies' webpages.
- But unlike some other job portals, Jobindex does not have a filter for
- 
+\end_layout
+
+\begin_layout Standard
+Unlike some other job portals, Jobindex does not have a filter for 
 \begin_inset Quotes eld
 \end_inset
 
@@ -913,8 +915,8 @@ medskip
 
 \begin_layout Standard
 The scrape for this project thus modified the Jobindex-url according to
- the keywords and all the possible combinations between location, area and
- remote keyword for the period 2010-2020
+ all possible combinations between remote keyword, job category and area
+ for the period 2010-2020
 \begin_inset Foot
 status collapsed
 
@@ -1022,15 +1024,11 @@ medskip
 Sample controls
 \end_layout
 
-\begin_layout Subsubsection*
-Validating the accuracy of our keywords in identifying remote listings
-\end_layout
-
 \begin_layout Standard
-We would like to get an idea of how accurate our keywords are in identifying
- remote job listings, ie.
- whether our sample actually consists of job listings where working remotely
- is advertised, or if it is capturing the keywords being used in other contexts.
+We validate how accurately our keywords identify remote job listings, ie.
+ we check if our sample actually consists of job listings where working
+ remotely is advertised, or if it is capturing the keywords being used in
+ other contexts.
  To do so, we draw 5 random samples of 10 job listings each.
  For each listing, we go into Jobindex and read the full job description
  to check whether the possbility of working remotely is actually mentioned.
@@ -1276,7 +1274,7 @@ Source: Own calculations
 \end_layout
 
 \begin_layout Standard
-We find that, on average, we correctly identify remote job postings 80 pct.
+On average, we correctly identify remote job postings 80 pct.
  of the time and the results are fairly robust across samples, ranging from
  70-90 pct.
  in accuracy.
@@ -2603,7 +2601,7 @@ Ideally, we would like to observe our target (remote job listings) in both
  true causal effect of COVID-19 on remote work, but rather to make an educated
  guess of the magnitude of this effect and thereby motivate future research
  into how changes in policies such as mobility restrictions can have powerful
- effects on rearranging the incentives in the labour market.
+ effects on rearranging the incentives for employers in the labour market.
 \end_layout
 
 \begin_layout Subsection
@@ -2847,12 +2845,12 @@ medskip
 Next, we allow for a monthly seasonality component since there has been
  found to be some persistent patterns across months in data for US job openings.
  However, doing so significantly worsens the performance of our model and
- since 
+ since
 \series bold
-IT/WE
+ 
 \series default
- cannot come up with any further parameter changes that could improve the
- model fine-tuned by Prophet, we proceed with using this for our forecasting
+we cannot come up with any further parameter changes that could improve
+ the model fine-tuned by Prophet, we proceed with using this for our forecasting
  exercise.
  The results can be found in Figure 6 below.
 \end_layout
@@ -2877,8 +2875,8 @@ Predicted vs.
 
 
 \begin_inset Graphics
-	filename ../../../../Dropbox/KU Introduction to Social Data Science/Modules/forecast.png
-	scale 50
+	filename forecast.png
+	width 14cm
 
 \end_inset
 

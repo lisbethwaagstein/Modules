@@ -352,7 +352,7 @@ Exam number 133 has contributed to the following sections:
 \end_layout
 
 \begin_layout Standard
-1, 2.1, 2.3, 3.2, 4.1, 5
+1, 2.1, 2.3, 3.2, 5,4.1
 \end_layout
 
 \begin_layout Standard
@@ -376,7 +376,7 @@ Exam number 111 has contributed to the following sections:
 \end_layout
 
 \begin_layout Standard
-1, 1.1, 2.2, 3.1, 4.2, 5
+1, 1.1, 2.2, 3.1, 5,4.2
 \end_layout
 
 \begin_layout Standard
@@ -1025,10 +1025,11 @@ Sample controls
 \end_layout
 
 \begin_layout Standard
-We validate how accurately our keywords identify remote job listings, ie.
- we check if our sample actually consists of job listings where working
- remotely is advertised, or if it is capturing the keywords being used in
- other contexts.
+We validate the accuracy of our keywords in identifying remote listings,
+ to get an idea of how accurately remote job listings are identified.
+ In other words, we check if our sample actually consists of job listings
+ where working remotely is advertised, or if it is capturing the keywords
+ being used in other contexts.
  To do so, we draw 5 random samples of 10 job listings each.
  For each listing, we go into Jobindex and read the full job description
  to check whether the possbility of working remotely is actually mentioned.
@@ -1274,7 +1275,7 @@ Source: Own calculations
 \end_layout
 
 \begin_layout Standard
-On average, we correctly identify remote job postings 80 pct.
+We find that, on average, we correctly identify remote job postings 80 pct.
  of the time and the results are fairly robust across samples, ranging from
  70-90 pct.
  in accuracy.
