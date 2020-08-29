@@ -352,7 +352,7 @@ Exam number 133 has contributed to the following sections:
 \end_layout
 
 \begin_layout Standard
-1, 2.1, 2.3, 3.2, 5
+1, 2.1, 2.3, 3.2, 5,4.1
 \end_layout
 
 \begin_layout Standard
@@ -376,7 +376,7 @@ Exam number 111 has contributed to the following sections:
 \end_layout
 
 \begin_layout Standard
-1, 1.1, 2.2, 3.1, 5
+1, 1.1, 2.2, 3.1, 5,4.2
 \end_layout
 
 \begin_layout Standard
@@ -432,24 +432,6 @@ In this project, we use data from job postings to
 investigate the development of remote work in Denmark for the period 2010-2020
 \shape default
 .
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-We explore and characterize the development both overall and across different
- job categories and geographical areas.
-\end_layout
-
-\end_inset
-
- 
-\series bold
-LISBETH 
-\series default
-In light of the COVID-19 pandemic, we characterize the current state of
- remote work in Danmark and forecast the counterfactual of the pandemic
- using machine learning.
 \end_layout
 
 \begin_layout Standard
@@ -477,46 +459,17 @@ We collect data on remote jobs for the period 2010-2020 by scraping the
  text analysis.
 
 \series bold
- LISBETH 
+ 
 \series default
-Furthermore, we use a subset of the dataset from 2010-2019 to forecast the
- counterfactual....Forecast! The model is based on time series data and is cross-val
-idated using different training and testing data.
- The prediction reveal the development in the remote labour market that
- we could have expected without the outbreak of COVID-19.
-\end_layout
-
-\begin_layout Standard
-To the best of our best knowledge, there does not currently exist any studies
+Furthermore, we use a subset of the dataset from 2010-2019 to forecast an
+ artificial counterfactual to the development in remote job listings for
+ 2020 in order to get a rough estimate of the size of the effect the outbreak
+ of COVID-19 has had on remote labour.
+ To the best of our best knowledge, there does not currently exist any studies
  of the remote labour market in Denmark using data from job postings.
  Thus, this paper's contribution is to complement the picture of the remote
  labour market which has already been painted by previous research with
  insights from the demand side of the Danish labour market.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Our descriptive analysis confirms what media outlets and academics have
- foreseen, namely, that the option of working remotely is becoming increasingly
- available, and the global pandemic seems to have created a 
-\begin_inset Quotes eld
-\end_inset
-
-remote work
-\begin_inset Quotes erd
-\end_inset
-
- wave for workplaces to ride on.
- The potential for remote work in the future depends on the composition
- of the labour market and the skill level of the labour force, and may also
- require workplaces to formalize policies or guidelines for remote work
- to become widespread in the long-run.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -650,23 +603,12 @@ In the referenced studies, and in most of the literature on remote work,
  on the demand side of the labour market, ie.
  the employer, and their perception on whether a job can be performed remotely.
  
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-New methods for obtaining text data such as job postings create new ways
- to do data analysis.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 The method of obtaining text data by webscraping is still relatively new,
  but it can be very powerful when it comes to gaining insight into otherwise
- inaccessibe data sources.
+ inaccessible data sources.
  As an example, a management consulting firm in Denmark has used text data
  from job postings to generate descriptive statistics about the development
  of demand in labour within the industries of IT and telecommunications,
@@ -704,9 +646,6 @@ For this project, we scrape job listings from the Danish job portal Jobindex
  in the period 2010-2020, more specifically the job title, company, and
  a preview of the full job listing, which are all available on Jobindex's
  search results page (see Figure 1 below).
- We have chosen Jobindex, because it includes not only the portals own job
- postings, but also almost all publicly available job posting from other
- job portals and companies' webpages.
 \end_layout
 
 \begin_layout Standard
@@ -762,7 +701,11 @@ medskip
 \end_layout
 
 \begin_layout Standard
-Unlike some other job portals, Jobindex does not have a filter for 
+We have chosen Jobindex, because it includes not only the portals own job
+ postings, but also almost all publicly available job posting from other
+ job portals and companies' webpages.
+ But unlike some other job portals, Jobindex does not have a filter for
+ 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1444,8 +1387,8 @@ The figure shows an overall increase in both remote and total monthly job
  and leading to spikes in the total number of job postings around 2012 and
  2015.
  However, zooming in on the recent months, the total number of job postings
- has been decreasing, pressumably due to the economic slowdown that resulted
- from COVID-19 related lockdowns.
+ has been decreasing, presumably due to the economic slowdown that resulted
+ from COVID-19 related lock-downs.
  On the other hand, the number of remote job postings has reached a new
  high of up to more than 200 remote vacancies published.
  This rapid increase should also be seen in light of COVID-19, where companies
@@ -1558,7 +1501,7 @@ Overall, remote job postings make up less than one pct.
  Historically, our remote keywords have been linked to positions within
  the Sales and Communication branch, and when having a look at the samples
  from our dataset, we see that many of them are advertising for positions
- as travelling salesmen.
+ as traveling salesmen.
  However, since 2015, an increasing share of the remote job postings are
  within Information Technology, and Office and Finance, which often includes
  
@@ -1573,7 +1516,7 @@ desk jobs
  At the other end of the spectrum, we find a low share of remote job postings
  in the categories of Industry and Craft, Teaching and Social and Health,
  i.e.
- occupations that involve manual work or contact with people and threfore
+ occupations that involve manual work or contact with people and therefore
  require that the worker is physically present.
 \end_layout
 
@@ -1598,9 +1541,9 @@ Part of the attractiveness of working remotely, either full-time or part-time,
  is the fact that workers need not commute to the workplace.
  This can save them time, increase flexibility in their everyday life, help
  the environment, and help reduce traffic jams.
- This is especially relevant for workplaces in the big citites, where most
+ This is especially relevant for workplaces in the big cities, where most
  jobs are usually concentrated and where pressures on the housing market
- can drive prices up to unaffordable levels.
+ can drive prices up to inaffordable levels.
 \end_layout
 
 \begin_layout Standard
@@ -1608,45 +1551,6 @@ Figure 5 shows remote job postings as a share of total jobs postings across
  different Danish regions in 2010 and 2020.
  We have chosen these two points in time for multiple reasons, one of them
  being that they are the first and last points in our dataset.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Jeg ved ikke om det her er vigtigt.
- Det er også lidt i modstrid med noget der står øvrest hvor vi siger at
- konjunkturen begyndte at gå op i 2010
-\end_layout
-
-\begin_layout Plain Layout
-However, we must bear in mind that the global financial crisis hit Denmark
- in 2009, which lowered the demand for labor and therefore naturally has
- had a negative effect on the number of new jobs posted.
- The COVID-19 pandemic hit Denmark in March 2020 and closed parts of the
- society down, which also decreased economic activity, but also increased
- the attention to remote work in a way not seen before.
- We could have mapped the years 2010 and 2019 to investigate the overall
- regional changes in job postings that mention remote work over time, but
- we have chosen the years 2010 and 2020 to include the potential effect
- of COVID-19.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-In light of economic cycles, we therefore find is most reasonable to compare
- the years 2008 and 2019, as these are both before an economic downturn,
- and we also show the numbers for the year 2020 so far to shed light on
- how the COVID-19 crisis has increased the attention to remote work.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1752,7 +1656,7 @@ For 2010, we see that around 0.61 and 0.8 pct.
  across categories since we could expect more manual and service jobs in
  the Southern Denmark Region relative to a higher concentration of administrativ
 e jobs in the bigger cities such as Odense and Copenhagen.
- When we turn to the map of 2020, the samme pattern is present.
+ When we turn to the map of 2020, the same pattern is present.
  The regions containing Copenhagen, Aarhus and Odense (the three largest
  cities) have the highest percentage of remote job postings.
  Specifically, in the Capital Region the share of remote job postings has
@@ -2237,7 +2141,7 @@ Generally, the most frequent words in job postings can be grouped around
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -2696,20 +2600,29 @@ Ideally, we would like to observe our target (remote job listings) in both
  prior to the pandemic and making a forecast for 2020 could provide us with
  an artificial counterfactual to the actual development of remote job listings.
  Notice that the purpose of this exercise is not to formally estimate the
- true causal effect of COVID-19 on remote work, but rather to motivate and
- challenge future research into the potential that policy changes have on
- rearranging the incentives in the labour market.
+ true causal effect of COVID-19 on remote work, but rather to make an educated
+ guess of the magnitude of this effect and thereby motivate future research
+ into how changes in policies such as mobility restrictions can have powerful
+ effects on rearranging the incentives in the labour market.
 \end_layout
 
 \begin_layout Subsection
-Forecasting with the Prophet procedure
+Forecasting using the Prophet procedure
 \end_layout
 
 \begin_layout Standard
 Since we have uni-variate time series data on monthly remote job listings,
  for our forecasting we chose to use the Prophet algorithm developed by
  Facebook, as it is considered to perform well in modeling data with seasonal
- effects[BLOOMBERG ARTIKEL] and shifts in trends.
+ effects
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13"
+literal "false"
+
+\end_inset
+
+ and shifts in trends.
  Part of the attractiveness of Prophet is that it automatically finds seasonal
  trends beneath the data and offers a set of parameters that are easy to
  understand and can be calibrated accordingly.
@@ -2957,7 +2870,7 @@ status open
 
 \begin_layout Plain Layout
 Predicted vs.
- actual monthly remote job listings 2010-2019
+ actual monthly remote job listings 2010-2020
 \end_layout
 
 \end_inset
@@ -3088,7 +3001,7 @@ literal "false"
  and the employers' organisation, Confederation of Danish Industry (DI).
  DI further recommends that companies formalize guidelines for remote work
  and evaluate continuously in order for remote work to be successfully adopted
- without comprimising productivity
+ without compromising productivity
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-8"
@@ -3149,7 +3062,7 @@ We take full responsibility for this statement, as it is based solely on
 \end_inset
 
  when comparing results from the filter to those found using the keywords.
- We think this has to do with Careergate labelling a vacancy as remote only
+ We think this has to do with Careergate labeling a vacancy as remote only
  if the employer has directly specified so (probably by checking a 
 \begin_inset Quotes eld
 \end_inset
@@ -3181,7 +3094,7 @@ medskip
 \end_layout
 
 \begin_layout Standard
-Given our contraints on time and space, we had to limit the scope of the
+Given our constraints on time and space, we had to limit the scope of the
  project in several dimensions.
  Initially, we set out to scrape all job postings from Jobindex over the
  period 2008-2020, so that our sample would include a year prior to the
@@ -3195,10 +3108,26 @@ Given our contraints on time and space, we had to limit the scope of the
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 This does not mean that our data isn't interesting enough, one could for
- example match our data for the name of the company postng the job listing
+ example match our data for the name of the company posting the job listing
  to data from the Central Business register and thereby get a picture industry,
- size and nationalies of employers offering remote work opportunities.
+ size and nationalities of employers offering remote work opportunities.
  Another interesting exercise, which we ourselves performed but had to exclude
  to due poor accuracy when testing, is to match the words in the job titles
  to the job functions included in the DISCO-08 classification, this would
@@ -3213,6 +3142,41 @@ literal "false"
 
  whereby the potential of remote work increases with the overall skill level
  of the population is present.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In conclusion, our descriptive analysis lends support to what media outlets
+ and academics have foreseen, namely, that the option of working remotely
+ is becoming increasingly available, and the global pandemic seems to have
+ created a 
+\begin_inset Quotes eld
+\end_inset
+
+remote work
+\begin_inset Quotes erd
+\end_inset
+
+ wave for workplaces to ride on.
+ The potential for remote work in the future depends on the composition
+ of the labour market and the skill level of the labour force, and may also
+ require workplaces to formalize policies or guidelines for remote work
+ to become widespread in the long-run.
 \end_layout
 
 \begin_layout Standard
