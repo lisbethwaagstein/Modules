@@ -2198,9 +2198,9 @@ literal "false"
 
 \end_inset
 
- study about women working in tech found that 76% of the women surveyed
- listed remote working opportunities as top priority when it comes to closing
- the gender gap.
+ study about women working in tech found that 76 pct.
+ of the women surveyed listed remote working opportunities as top priority
+ when it comes to closing the gender gap.
 \end_layout
 
 \begin_layout Standard
@@ -2673,7 +2673,11 @@ teknisk (technical)
 \end_layout
 
 \begin_layout Section
-Using forecasting as a COVID-19 counterfactual
+Forecasting
+\end_layout
+
+\begin_layout Subsection
+Searching for a COVID-19 counterfactual
 \end_layout
 
 \begin_layout Standard
@@ -2898,7 +2902,7 @@ MAPE
 \end_layout
 
 \begin_layout Standard
-...Prophet has found a linear trend to be the best fit and based on what we
+Prophet has found a linear trend to be the best fit and based on what we
  saw in the graphical analysis we do not have any reason to think that remote
  job listings will be reaching a saturation point in the near future; therefore,
  we leave this parameter as it is.
@@ -2908,17 +2912,36 @@ MAPE
  for the effect to extend to days leading to the holiday.
  We find that although having similar MAPEs, the specification chosen by
  Prophet beats ours.
- Next, we allow for a monthly seasonality component since there has been
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next, we allow for a monthly seasonality component since there has been
  found to be some persistent patterns across months in data for US job openings.
  However, doing so significantly worsens the performance of our model and
- since cannot come up with any more parameter changes that could improve
- the model fine-tuned by Prophet, we proceed with using this for our forecasting
+ since 
+\series bold
+IT/WE
+\series default
+ cannot come up with any further parameter changes that could improve the
+ model fine-tuned by Prophet, we proceed with using this for our forecasting
  exercise.
- The results can be found in the figure below.
- We see that the model tends to underpredict the trend in remote job listings,
- however, the difference between actual and predicted values for the 2020
- period stands particularly out which is in line with our suspicion that
- the outbreak of COVID-19 has accelerated the expansion of remote work.
+ The results can be found in Figure 6 below.
 \end_layout
 
 \begin_layout Standard
@@ -2926,7 +2949,7 @@ MAPE
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2958,7 +2981,7 @@ has_inner_box 1
 inner_pos "t"
 use_parbox 0
 use_makebox 0
-width "100col%"
+width "12cm"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -2970,14 +2993,12 @@ backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
-\align center
 Note: Predicted values were estimated by fitting our data to the Prophet
- model
+ model.
 \end_layout
 
 \begin_layout Plain Layout
-\align center
-Source: Own calculations.
+Source: Own calculations
 \end_layout
 
 \end_inset
@@ -2988,6 +3009,13 @@ Source: Own calculations.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+We see that the model tends to underpredict the trend in remote job listings,
+ however, the difference between actual and predicted values for the 2020
+ period stands particularly out which is in line with our suspicion that
+ the outbreak of COVID-19 has accelerated the expansion of remote work.
 \end_layout
 
 \begin_layout Section
@@ -3060,7 +3088,7 @@ literal "false"
  and the employers' organisation, Confederation of Danish Industry (DI).
  DI further recommends that companies formalize guidelines for remote work
  and evaluate continuously in order for remote work to be successfully adopted
- without comprimising productivity.
+ without comprimising productivity
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-8"
@@ -3068,7 +3096,7 @@ literal "false"
 
 \end_inset
 
-
+.
 \begin_inset Newline newline
 \end_inset
 
@@ -3095,8 +3123,9 @@ medskip
 Along with companies offering more remote positions comes the need for a
  way that job seekers can find these positions easily.
  In this project, we identified remote listings with an average accuracy
- of 80% by searching for a list of keywords/expressions linked to remote
- work that we defined.
+ of 80 pct.
+ by searching for a list of keywords/expressions linked to remote work that
+ we defined.
  The sudden increase in remote listings provides an opportunity for Jobindex
  and other job portals to implement a 
 \begin_inset Quotes eld
@@ -3159,11 +3188,14 @@ Given our contraints on time and space, we had to limit the scope of the
  financial crisis and allow us to put the effect of COVID-19 into an even
  broader perspective.
  As the program we coded to do this would have taken days to execute, we
- went through with a smaller period including only data for remote job listings.
+ went through with a shorter period including only data for remote job listings.
  However, the full dataset would allow for further insight into the remote
  labour market and how the patterns found in the remote job listings compare
  to those from the total job listings.
- This doesn't mean that our data isn't interesting enough, one could for
+\end_layout
+
+\begin_layout Standard
+This does not mean that our data isn't interesting enough, one could for
  example match our data for the name of the company postng the job listing
  to data from the Central Business register and thereby get a picture industry,
  size and nationalies of employers offering remote work opportunities.
