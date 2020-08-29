@@ -2204,16 +2204,16 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Moreover, the most frequent words in job listings can be grouped around
- two major themes, namely IT and sales, which is not surprising given what
- we have seen in the descriptive analysis.
+Generally, the most frequent words in job postings can be grouped around
+ two major themes, namely IT and sales, which is not surprising given the
+ results in the descriptive analysis.
  However, one could imagine that not all jobs related to sales and IT can
- be performed remotely, and we would like to know with more detail which
- type of jobs are being advertised as remote.
+ be performed remotely, and we therefore explore in more detail which types
+ of jobs are being advertised as remote.
  For this, we extract the top 10 most frequent words used in the titles
  from job listings, where the name of the position is usually mentioned.
  The same procedure as with the preview of the job listings is followed
- and the results can be found in Table 3 below.
+ and the results are found in Table 3 below.
 \end_layout
 
 \begin_layout Standard
@@ -2583,13 +2583,14 @@ sap
 status collapsed
 
 \begin_layout Plain Layout
-\begin_inset Quotes erd
-\end_inset
-
- in this context most likely referring to Systems Applications and Products
- in Data Processing software
+In this context most likely referring to Systems Applications and Products
+ in Data Processing software.
 \end_layout
 
+\end_inset
+
+
+\begin_inset Quotes erd
 \end_inset
 
  suggests that remote jobs are mostly advertised for management positions.
@@ -2625,7 +2626,7 @@ consultant
 \begin_inset Quotes erd
 \end_inset
 
-, it seems that within the IT sector, remote job listings center around
+, it seems that within the IT sector, remote job postings center around
  senior positions; while, more ambiguous words like 
 \begin_inset Quotes eld
 \end_inset
@@ -2646,13 +2647,13 @@ developer
 \begin_inset Quotes eld
 \end_inset
 
-teknisk
+teknisk (technical)
 \begin_inset Quotes erd
 \end_inset
 
  could also be used in the context of entry-level jobs.
- In the case of sales, this analysis doesn't get us much further than what
- was observed before.
+ In the case of sales, this analysis does not get us much further than what
+ we already observed.
 \end_layout
 
 \begin_layout Section

@@ -2145,7 +2145,10 @@ The first thing that comes to mind when looking at Table 2 is how similar
  We also see that Copenhagen is mentioned quite often, which is in line
  with the trend we saw before whereby remote positions tend to concentrate
  around the capital.
- The fact that the word 
+\end_layout
+
+\begin_layout Standard
+The fact that the word 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2154,8 +2157,7 @@ mulighed (possibility)
 \end_inset
 
  is included when advertising for remote jobs suggests that working remotely
- is often used as a selling point to make a position more attractive to
- applicants.
+ is used as a selling point to make a position more attractive to applicants.
  Take for example the following snippet taken from Jobindex and translated
  to English: 
 \begin_inset Quotes eld
@@ -2166,7 +2168,7 @@ Your work will take place in our office in Copenhagen, but there will be
 \begin_inset Quotes erd
 \end_inset
 
-.
+
 \begin_inset Foot
 status collapsed
 
@@ -2184,6 +2186,7 @@ Dit arbejdet vil foregå fra vores kontor i København, men der vil være muligh
 
 \end_inset
 
+.
  By signaling to job seekers that there is a possibility of working partly
  or fully remotely, employers can expand their pool of applicants not only
  across geographical location but also socioeconomic background.
@@ -2198,7 +2201,10 @@ literal "false"
  study about women working in tech found that 76% of the women surveyed
  listed remote working opportunities as top priority when it comes to closing
  the gender gap.
- Moreover, the most frequent words in job listings can be grouped around
+\end_layout
+
+\begin_layout Standard
+Moreover, the most frequent words in job listings can be grouped around
  two major themes, namely IT and sales, which is not surprising given what
  we have seen in the descriptive analysis.
  However, one could imagine that not all jobs related to sales and IT can
