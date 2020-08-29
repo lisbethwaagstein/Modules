@@ -28,10 +28,11 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
+\paperfontsize 12
+\spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -44,6 +45,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -55,6 +57,10 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -158,115 +164,293 @@ LatexCommand tableofcontents
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+husk: contributions
+\end_layout
+
+\begin_layout Plain Layout
+references!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+The spread of COVID-19 has forced governments to impose restrictions on
+ the mobility of citizens' to minimize the risk of infection.
+ This has led researchers and several news media to speculate about whether
+ working remotely will be the new normal.
+ In this project, we scrape data from job postings published in the Danish
+ jobportal Jobindex to 
+\shape italic
+investigate the development of remote work in Denmark over the period 2010-2020
+\shape default
+.
+ Our descriptive analysis confirms that the option of working remotely has
+ become increasingly available throughout the whole period, and the global
+ pandemic seems to have created a wave for workplaces to ride on.
+ The potential for remote work in the future depends on the composition
+ of the labour market and the skill level of the labour force, and may also
+ require workplaces to formalize policies or guidelines for remote work
+ to become widespread in the long-run.
+\end_layout
+
 \begin_layout Section*
 Introduction
 \end_layout
 
 \begin_layout Standard
-Some motivation: ........................
+The spread of COVID-19 has forced governments to impose restrictions on
+ the mobility of citizens' to minimize the risk of infection.
+ This has led researchers and several news media to speculate about whether
+ working remotely will be the new normal.
+ Although the widespread technological development within portable devices
+ and online cloud-sharing has long been expected to transform the modern
+ workplace, no one had foreseen the sudden need for remote work that followed
+ from the outbreak of COVID-19.
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallskip
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-Our project aims to investigate the expansion/development of remote work
- in the Danish labour market (possibly 2008-2020) using data joblistings
- from jobindex.
+In this project, we use data from job postings to 
+\shape italic
+investigate the development of remote work in Denmark over the period 2010-2020
+\shape default
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We explore and characterize the development both overall and across different
+ job categories and geographical areas.
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+LISBETH In light of the COVID-19 pandemic, we characterize the current state
+ of remote work in Danmark and forecast the counterfactual of the pandemic
+ using machine learning.
 \end_layout
 
 \begin_layout Standard
-The first part of the project consists of a descriptive analysis of the
- trend in remote job postings both in absolute numbers but also relative
- to the total number of job postings.
- This is done merely to confirm (at least superficially) the trend that
- many media outlets and academics have foreseen whereby the option of working
- remotely is becoming increasingly available.
- This descriptive analysis will map the historic and current state of working
- remotely in Denmark and provide a stepping stone for the second part of
- the project, which aims to identify the scope of remote work in the future
- by forecasting the trend in remote job postings overall and within different
- industries - one could for example expect that jobs within the service
- and hospitality industry cannot be fulfilled remotely.
- The model is based on time series data and will be cross-validated using
- different training and testing data (regularization needed?).
- The prediction can help reveal the potential of remote work in the future.
-\end_layout
-
-\begin_layout Standard
+We collect data on remote jobs for the period 2010-2020 by scraping the
+ Danish jobportal Jobindex filtering for job listings containing one or
+ more keywords that can be linked to remote work from a list defined by
+ ourselves.
+ The data trends in remote work are then explored graphically and using
+ text analysis.
 
 \series bold
-Short literature review: 
-\series default
-What do we know about the expansion of remote jobs?
+ LISBETH Furthermore, we use a subset of the dataset from 2010-2019 to forecast
+ the counterfactual....Forecast! The model is based on time series data and
+ is cross-validated using different training and testing data.
+ The prediction reveal the development in the remote labour market that
+ we could have expected without the outbreak of COVID-19.
 \end_layout
 
 \begin_layout Standard
-- NBER working paper: WORKING REMOTELY AND THE SUPPLY-SIDE IMPACT OF COVID-19
- https://www.nber.org/papers/w27330.pdf?fbclid=IwAR3OY3jxDTOYVVf3QCoetNyBDlFBdXliwR
-2ZXymJ6X88Lk1ODa8kCRSW2Ek
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-- Federal Reserve Bank of Dallas: Work from Home After the COVID-19 Outbreak
+While COVID-19 has led to a renewed interest in the remote labour market,
+ the topic has been studied before.
+ A recent study by Dingel & Neiman (2020)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+ explores the potential for remote work by creating a classification measure
+ from the O*NET survey, that estimates the extent to which an occupation
+ can be performed entirely from home.
+ The authors estimate that 37 pct.
+ of US jobs can plausibly be performed from home, including most jobs in
+ finance, corporate management, and professional and scientific services.
+ On the other hand, very few jobs in agriculture, hotels and restaurants,
+ or retail could be converted to remote positions.
+ The authors also note that there is significant variation in the potential
+ for remote work across geographical areas, depending on the types of jobs
+ and skills of workers in the specific area (Dingel & Neiman, 2020)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
+ OECD (2020) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-15"
+literal "false"
+
+\end_inset
+
+apply this same classification to data from labour force surveys in 27 EU
+ countries, Switzerland, Turkey and the US.
+ They find that cities generally have a larger share of employment in occupation
+s that can work from home and they estimate that at the national level,
+ 40 pct.
+ of Danish jobs can potentially be performed remotely, whereas the number
+ is around 47 pct.
+ for jobs in the Copenhagen area.
+ OECD (2020) also make the point that, since big cities may suffer from
+ a higher risk of COVID-19 contagion because of high population density,
+ a greater potential for working from home can provide a source of resilience
+ to the economic downturn that follows health crisis such as the outbreak
+ of COVID-19.
+ (OECD, 2020)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-15"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-LINKS:
+In the referenced studies, and in most of the literature on remote work,
+ focus is usually placed on the supply side of the labour market by surveying
+ employees about their prospects on working remotely.
+ However, in order for remote work to become widespread, the expectations
+ of both employers and employees must match.
+ Job listings are an interesting source of data because they shed light
+ on the demand side of the labour market, ie.
+ the employer, and their perception on whether a job can be performed remotely.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+New methods for obtaining text data such as job postings create new ways
+ to do data analysis.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-- https://voxeu.org/article/how-many-jobs-can-be-done-home
+The method of obtaining text data by webscraping is still relatively new,
+ but it can be very powerful when it comes to gaining insight into otherwise
+ inaccessibe data sources.
+ As an example, a management consulting firm in Denmark has used text data
+ from job postings to generate descriptive statistics about the development
+ of demand in labour within the industries of IT and telecommunications,
+ and the iron, metal and auto sectors
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
+ Other projects include feeding job descriptions to a machine learning model
+ to estimate appropriate salary
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-12"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-https://voxeu.org/article/how-covid-19-crisis-reshaping-remote-working
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-https://voxeu.org/article/potential-remote-working-across-different-places?fbclid
-=IwAR2zo04l-Hdlz9Tn2fCRCs4itnG7rI4_SwjenBl4XK5nWUi2Y35yzCdQmmo
+To the best of our best knowledge, there does not currently exist any studies
+ of the remote labour market in Denmark using data from job postings.
+ Thus, this paper's contribution is to complement the picture of the remote
+ labour market which has already been painted by previous research with
+ insights from the demand side of the Danish labour market.
+ Our descriptive analysis confirms what media outlets and academics have
+ foreseen, namely, that the option of working remotely is becoming increasingly
+ available, and the global pandemic seems to have created a 
+\begin_inset Quotes eld
+\end_inset
+
+remote work
+\begin_inset Quotes erd
+\end_inset
+
+ wave for workplaces to ride on.
+ The potential for remote work in the future depends on the composition
+ of the labour market and the skill level of the labour force, and may also
+ require workplaces to formalize policies or guidelines for remote work
+ to become widespread in the long-run.
 \end_layout
 
 \begin_layout Standard
-In Denmark:
-\end_layout
-
-\begin_layout Standard
-- Arbejdsgiver organisation: https://www.danskindustri.dk/vi-radgiver-dig-ny/perso
-nale/personalejura/vilkar-under-ansattelsen/personalepolitik/hjemmearbejde/
- + Virksomhedspanelet ang.
- hjemmearbejde (
-\end_layout
-
-\begin_layout Standard
-- Political push: https://politiken.dk/oekonomi/art7882631/Vi-skal-igen-til-at-ar
-bejde-hjemme
-\end_layout
-
-\begin_layout Standard
-xxxxx
-\end_layout
-
-\begin_layout Standard
-Højbjerre Brauer Schultz
-\end_layout
-
-\begin_layout Standard
-.......................................
-\end_layout
-
-\begin_layout Standard
-The paper is structured as follows:
-\end_layout
-
-\begin_layout Standard
-Job listings are interesting because they give us insight into the demand
- side of the labor market (the employer) and their perception on the possibility
- of employees working remotely, whereas many surveys usually focus on employees.
- Further, we can see if there is a pattern in the words/phrases otherwise
- used in “remote” job postings.
+The rest of the paper is structured as follows: Section 2 describes the
+ process of data collection and cleaning, and results from sample controls.
+ Section 3 is a descriptive analysis of the remote labour market in Denmark
+ including a text analysis of the job titles and descriptions.
+ Section 4 explains the theory and methods used for forecasting, followed
+ by a forecasting exercise of the remote labour market in the absence of
+ COVID-19 .
+ Section 5.
+ Section 6 discusses the project's results, strenghts and weaknesses, ideas
+ further research and conclusion.
 \end_layout
 
 \begin_layout Section*
@@ -277,27 +461,29 @@ Theory and methodology
 Data
 \end_layout
 
-\begin_layout Standard
-This section....
-\end_layout
-
 \begin_layout Subsection*
 Data collection
 \end_layout
 
 \begin_layout Standard
 For this project, we will scrape job listings from the Danish job portal
- Jobindex in the period 2015-2020.
+ Jobindex in the period 2010-2020.
  More specifically, we will scrape the job title, company, and a preview
  of the full job listing.
- These are all available on the search results page (see Figure 1).
- Ideally, we would have liked to scrape the full job listing.
+ These are all available on Jobindex's search results page (see Figure 1).
+ Ideally, we would have liked to scrape the full job listing and not just
+ the preview.
  However, doing so would require scraping not only Jobindex but also different
- company websites and PDF with varying HTML structure and although we wrote
- a program for this, running it would take more time than what we had available
- for the project.
- It is due to these same time constraints that we decided not to extend
- the period sample any further.
+ company websites and PDFs with varying HTML structure; and although we
+ wrote a program that should be able to achieve this, once we started running
+ it we realized it would take more time than what we had available for the
+ project.
+ It is also due to these same time constraints that we decided not to extend
+ the sample period any further than 2010-2020.
+ Notice that since all current and archived job listings in Jobindex are
+ publicly available and do not contain any personal data, we could not think
+ of any ethical breaches to take into consideration before proceeding with
+ the scraping.
 \end_layout
 
 \begin_layout Standard
@@ -319,13 +505,10 @@ Standard job listing in Jobindex
 
 \begin_inset Graphics
 	filename Job_box.PNG
+	scale 50
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -335,32 +518,198 @@ Standard job listing in Jobindex
 \end_layout
 
 \begin_layout Standard
-We will then define some keywords (or expressions) such as “hjemmearbejde,
- hjemmekontor, arbejde hjemmefra, etc” that we expect job postings where
- working remotely is allowed (or encouraged) would contain.
- We can search for these expressions in our job data and classify jobs into
- remote/not remote.
- The labeling model will be checked by random sample controls.
- Our plan is to classify the job postings into job functions (preferable
- DISCO-08 codes), industries (categories on jobindex) and geographical areas.
+Unlike other job portals, Jobindex doesn't have a filter for 
+\begin_inset Quotes eld
+\end_inset
+
+remote
+\begin_inset Quotes erd
+\end_inset
+
+ positions.
+ Therefore, the way we identify these listings is by defining a list of
+ keywords that we think would be mentioned in a posting offering the possibility
+ of working from home.
+ This list of keywords is: 
+\begin_inset Quotes eld
+\end_inset
+
+hjemmekontor
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+hjemmearbejde
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+fjernarbejde
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+arbejde hjemmefra
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+arbejde hjemme
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+remote arbejdsplads
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+remote work
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+work remotely
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+working remotely
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+working from home
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+home office
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+home-office
+\begin_inset Quotes erd
+\end_inset
+
+ .
+ Moreover, we would also like to classify the job listings according to
+ the location of the position, and the branch or industry it falls into.
+ As seen in figure 1, this information is not available when looking at
+ each job listing individually.
+ However, Jobindex allows you to filter the results according to date, job
+ category and geographical area which meant that we had to scrape the search
+ results of all the possible combinations between location, area and remote
+ keyword for the period 2010-2010.
+ The job categories used by Jobindex are Information Technology, Engineering
+ and Technology, Management and Staff, Trade and Service, Industry and Craft,
+ Sales and Communication, Teaching, Office and Finance, Social and Health
+ and Other positions.
+ Moreover, the geographical ares we will include in our data are: Capital
+ Area, North Zealand, Region Zealand, Funen, North Jutland, Central Jutland,
+ Sotuh Jutland, Bornholm and Denmark
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+We have excluded Greenland, Faroe Islands, and Foregin countries.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lastly, to put the development in remote job listings into perspective,
+ we will also need data for the total monthly job listings for the period
+ 2010-2020 across categories and geographical areas.
+ For this, we change the search filters accordingly and scrape the total
+ number of jobs that match our search.
 \end_layout
 
 \begin_layout Subsection*
 Data cleansing
 \end_layout
 
-\begin_layout Subsection*
-Ethical Considerations in data collection
+\begin_layout Standard
+Since the categories and locations provided in Jobindex's search filters
+ are not mutually exclusive, and neither are the remote keywords that we
+ defined, our dataset is bound to have many duplicates.
+ We start with a dataset containing 54281 joblistings and we progressively
+ delete duplicate job listings.
+ The step-by-step process can be found in Figure 2.
+ Notice that the way we have cleaned our data has the implication that if
+ the same job falls under two (or more) categories, by deleting its duplicates
+ we are randomly assigning one of the two categories and deleting the others.
+ Although this isn't ideal, it is the best solution we could come up with.
+ After these steps, we end up with a dataset consisting of 14717 job listings
+ in the period 2010-2020 where at least one of our remote keywords is mentioned.
 \end_layout
 
 \begin_layout Standard
-The job postings from Jobindex are publicly available.
- Jobindex also keeps an archive of old job postings.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data cleansing process
 \end_layout
 
-\begin_layout Standard
-Ideally, we would have liked to scrape all job listings in Jobindex for
- the period 2008-2012.
+\end_inset
+
+
+\begin_inset Graphics
+	filename dataset_structure.PNG
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
@@ -372,24 +721,35 @@ Validating the accuracy of our keywords in identifying remote listings
 \end_layout
 
 \begin_layout Standard
-The way we identify remote job listings is by defining a list of keywords
- that we think would be mentioned in a job listing offering the possibility
- of working from home.
- These set of keywords is ['hjemmekontor', 'hjemmearbejde', 'fjernarbejde',
- 'arbejde hjemmefra', 'arbejde hjemme', 'remote arbejdsplads','remote work',
- 'work remotely', 'working remotely','working from home', 'home office',
- 'home-office'].
- To have an idea of whether we are in fact identifying remote jobs, we draw
- three random samples consisting of 10 job listings each.
- For each of these listings we go into Jobindex and read the full job descriptio
-n to check whether the possbility of working remotely is actually mentioned.
- The accuracy of our search filter can be seen below.
- It is worth mentioning that we could only rule out the possibility of 3
- out of 6 job listings being remote that we counted as not being remote,
+We would like to get an idea of how accurate our keywords are in identifying
+ remote job listings, ie.
+ whether our sample actually consists of job listings where working remotely
+ is advertised, or if it is capturing the keywords being used in other contexts.
+ To do so, we draw 5 random samples consisting of 10 job listings each.
+ For each listing, we go into Jobindex and read the full job description
+ to check whether the possbility of working remotely is actually mentioned.
+ The results of this exercise can be found in the table below.
+ Note that 80% of the joblistings we counted as fails weren't 
+\begin_inset Quotes eld
+\end_inset
+
+true
+\begin_inset Quotes erd
+\end_inset
+
+ fails, but rather cases where we couldn't get access to the full job listing
+ either due to the link being broken or because Jobindex couldn't retrieve
+ a copy of the full job listing.
+ Despite this, we found that on average, we had correctly identified remote
+ job listings 80pct.
+ of the time and the results were fairly robust across samples, ranging
+ from 70-90 pct.in accuracy.
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
@@ -398,7 +758,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Testing filter accuracy in identifying remote job listings
 \end_layout
 
 \end_inset
@@ -409,8 +769,11 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="4">
+<lyxtabular version="3" rows="2" columns="7">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -443,11 +806,38 @@ Sample
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Average
 \end_layout
 
 \end_inset
@@ -481,6 +871,33 @@ Accuracy
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -498,6 +915,41 @@ Accuracy
 
 \end_layout
 
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "12cm"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Note: Each sample consists of 10 randomly selected job listings
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+Source: Own calculations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -507,110 +959,379 @@ Accuracy
 Descriptive Analysis
 \end_layout
 
-\begin_layout Standard
-This sections describes the development of job postings with the option
- of working remotely in the period 2008-2020.
- To our best knowledge, there does not currently exist an analysis of the
- remote labour market in Denmark, which is why we will describe this in
- details below.
-\end_layout
-
-\begin_layout Standard
-Noget om k-means
-\end_layout
-
 \begin_layout Subsection*
 Graphical Analysis
 \end_layout
 
 \begin_layout Standard
-We start by looking at the overall trend in the remote job postings in both
- actual and relative numbers.
-
-\series bold
- *HERE use monthly/quarterly/yearly average?
-\series default
- Figure 1a shows the trend in the total number of remote job postings and
- the total number of job postings on Jobindex in the period 2008-2020.
-\end_layout
-
-\begin_layout Standard
-Figure 1b shows the percentage of remote job postings relative to the total
- number of job postings on Jobindex at a given point in time in the period
- 2008-2020.
- The bars are further split into job categories (indsutries).
-\end_layout
-
-\begin_layout Standard
-The figures show an overall increase.
- Write numbers.
-\end_layout
-
-\begin_layout Standard
-................
-\end_layout
-
-\begin_layout Standard
-As described earlier, the potential for working remotely differs between
- occupations.
- Next, we look at the differences in remote job postings within different
- job categories.
- The job categories are obtained from Jobindex, where the job seeker can
- filter the job postings according to the categories Information Technology,
- Engineering and technology, Management and staff, Trade and service, Industry
- and craft, Sales and communication, Teaching, Office and finance, Social
- and health and Other positions and more specific subcategories.
-\end_layout
-
-\begin_layout Standard
-Figure 2 shows the trend in the total number of remote job postings in the
- different job categories.
-\end_layout
-
-\begin_layout Standard
-Table 1 shows the number of remote job postings in the top-10 and bottom-10
- job subcategories in the years 2009 and 2020.
+We start by looking at the overall trend in job postings published in Jobindex
+ in both absolute and relative numbers.
  
 \series bold
-*or percentage and percentage point change between the years?
-\end_layout
-
-\begin_layout Standard
-............
-\end_layout
-
-\begin_layout Standard
-Part of the motivation for morking remotely, either fulltime or parttime,
- is the fact, that workers do not have to commute to the workplace.
- This can save them time, increases the flexibility in the every day life,
- it is good for the environment and may reduce traffic jams on the roads.
- Further, some suggest, that the option of working remotely makes it easier
- to live farther away from the workplace (eller folk, der bor længere væk
- fra arbejdspladsen er mere tilbøjelig til at søge jobs længere væk..).
- As many officejobs are located in the bigger cities,
-\end_layout
-
-\begin_layout Standard
-Figure 3 shows the 
-\series bold
-*number/percentage
+Figure 3
 \series default
- of remote job postings in different Danish regions in 2008, 2019 and 2020.
- We have chosen these three points in time for different reasons.
- First, we must bear in mind that a global financial crisis hit Denmark
- in 
+ shows the monthly trend in the number of remote job postings and in the
+ total number of job postings on Jobindex in the period 2010-2020.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Remote and total job postings published on Jobindex, 2010-2020
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig1a.png
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "12cm"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+Note: The data is not seasonally adjusted, as we want to investigate the
+ true numbers.
+\end_layout
+
+\begin_layout Plain Layout
+Source: Data scraped from www.jobindex.dk/jobsoegning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The figure shows an overall increase in both remote and total monthly job
+ postings over the whole period.
+ More specifically, from a level of around 15,000 total job postings per
+ month to almost 20,000, and a 100 pct.
+ increase from around 75 to 150 remote job postings per month (not taking
+ into account the most recent numbers).
+ Note that the number of job postings are generally business cycle dependent,
+ hence showing an increasing labour demand after the 2009 financial crisis
+ and leading to spikes in the total number of job postings around 2012 and
+ 2015.
+ However, zooming in on the recent months, the total number of job postings
+ has been decreasing, pressumably due to the economic slowdown that resulted
+ from COVID-19 related lockdowns.
+ On the other hand, the number of remote job postings has reached a new
+ high of up to more than 200 remote vacancies published.
+ This rapid increase should also be seen in light of COVID-19, where companies
+ have been forced to adapt to a remote working environment and are therefore
+ both more aware of this option and more capable of offering it to new employees.
+\end_layout
+
+\begin_layout Standard
+As pointed by earlier research, the potential for working remotely differs
+ between occupations.
+ Next, we look at the differences in remote job postings within different
+ job categories.The bars in 
 \series bold
-MONTH?
+Figure 4
 \series default
- 2009, which lowers the demand for labor and therefore naturally has a negative
- effect on the number of new jobs posted.
- Second, the COVID-19 pandemic hit Denmark in March 2020 and closed parts
- of the society down, which also decreased economic activity, but more important
-ly provided a shock to the demand for remote work in a way not seen before.
- In light of economic cycles, we therefore find is most reasonable to compare
+ depict remote job postings as a share of total job postings per year, whereas
+ the area inside the bar is used to show the distribution of remote postings
+ across job categories for the given year.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Remote job postings as a share of total job postings 2010-2020
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig1b.png
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "12cm"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Note: Share is calculated as (#remote job postings in category x/#total
+ job postings) and then stacked to get percentage remote job posting of
+ total job postings.
+ Data for 2020 only include the months Jan-Aug.
+\end_layout
+
+\begin_layout Plain Layout
+The area inside the bars depicts the distribution of remote postings across
+ job categories for the given year.
+\end_layout
+
+\begin_layout Plain Layout
+Source: Data scraped from www.jobindex.dk/jobsoegning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Overall, remote job postings make up less than one pct.
+ of the total job postings published in a given year from 2010 to 2020.
+ The percentage level is quite constant around 0.5-0.6 pct.up until 2019, and
+ then increases to almost 0.9 pct.
+ of all job postings published in 2020.
+ Historically, our remote keywords have been linked to positions within
+ the Sales and Communication branch, and when having a look at the samples
+ from our dataset, we see that many of them are advertising for positions
+ as travelling salesmen.
+ However, since 2015, an increasing share of the remote job postings are
+ within Information Technology, and Office and Finance, which often includes
+ 
+\begin_inset Quotes eld
+\end_inset
+
+desk jobs
+\begin_inset Quotes erd
+\end_inset
+
+ which an employee can do from home.
+ At the other end of the spectrum, we find a low share of remote job postings
+ in the categories of Industry and Craft, Teaching and Social and Health,
+ i.e.
+ occupations that involve manual work or contact with people and threfore
+ require that the worker is physically present.
+\end_layout
+
+\begin_layout Standard
+Part of the attractiveness of working remotely, either full-time or part-time,
+ is the fact that workers need not commute to the workplace.
+ This can save them time, increase flexibility in their everyday life, help
+ the environment, and help reduce traffic jams.
+ This is especially relevant for workplaces in the big citites, where most
+ jobs are usually concentrated and where pressures on the housing market
+ can drive prices up to unaffordable levels.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Figure 5
+\series default
+ shows remote job postings as a share of total jobs postings across different
+ Danish regions in 2010 and 2020.
+ We have chosen these two points in time for multiple reasons, one of them
+ being that they are the first and last points in our dataset.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Jeg ved ikke om det her er vigtigt.
+ Det er også lidt i modstrid med noget der står øvrest hvor vi siger at
+ konjunkturen begyndte at gå op i 2010
+\end_layout
+
+\begin_layout Plain Layout
+However, we must bear in mind that the global financial crisis hit Denmark
+ in 2009, which lowered the demand for labor and therefore naturally has
+ had a negative effect on the number of new jobs posted.
+ The COVID-19 pandemic hit Denmark in March 2020 and closed parts of the
+ society down, which also decreased economic activity, but also increased
+ the attention to remote work in a way not seen before.
+ We could have mapped the years 2010 and 2019 to investigate the overall
+ regional changes in job postings that mention remote work over time, but
+ we have chosen the years 2010 and 2020 to include the potential effect
+ of COVID-19.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+In light of economic cycles, we therefore find is most reasonable to compare
  the years 2008 and 2019, as these are both before an economic downturn,
  and we also show the numbers for the year 2020 so far to shed light on
  how the COVID-19 crisis has increased the attention to remote work.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Percentage remote job postings of total per Danish region, 2010 and 2020
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename area_map2010.PNG
+	width 6cm
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename area_map2020.PNG
+	width 6cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Note: Share is calculated as (#remote job postings in region x/#total job
+ postings in region x).
+ Data for 2020 only include the months Jan-Aug.
+\end_layout
+
+\begin_layout Plain Layout
+Source: Data scraped from www.jobindex.dk/jobsoegning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For 2010, we see that around 0.61 and 0.8 pct.
+ of job postings in the Capital Region, Funen and Northern Denmark Region
+ mention remote work, while only 0.33 pct.
+ of job postings in the Southern Danmark Region do.
+ This is not surprising when taking into consideration the pattern we saw
+ across categories since we could expect more manual and service jobs in
+ the Southern Denmark Region relative to a higher concentration of administrativ
+e jobs in the bigger cities such as Odense and Copenhagen.
+ When we turn to the map of 2020, the samme pattern is present.
+ The regions containing Copenhagen, Aarhus and Odense (the three largest
+ cities) have the highest percentage of remote job postings.
+ Specifically, in the Capital Region the share of remote job postings has
+ increased by 0.56 pct.points from 0.62 pct.
+ to 1.18 pct.
+ Given that cities usually have a highest risk of infection due to their
+ higher population densities, this suggests that workplaces in the cities
+ are quickly adapting to an environment of uncertainty where having well-establi
+shed systems for working remotely can be of advantage.
 \end_layout
 
 \begin_layout Subsection*
@@ -618,33 +1339,27 @@ Text analysis
 \end_layout
 
 \begin_layout Standard
-In this section we wanted to identify the most common words in those job
- listings that we classified as 
-\begin_inset Quotes eld
-\end_inset
-
-remote
-\begin_inset Quotes erd
-\end_inset
-
-.
- For this, we had to preprocess and tokenize all of the text in the short
- descriptions.
- Since our job listings included both texts in Danish and English, we made
- use of a language detector package that allowed us to split the dataset
- according to language.
- We also got rid of symbols, numbers and punctuation, set all text to lowercase,
- and removed stopwords in Danish and English respectively.
+In this section we wanted to identify the most frequent words in the job
+ listings that we classified as remote.
+ Since our job listings included both job listings in Danish and English,
+ we made use of a language detector package that allowed us to split the
+ dataset accordingly.
+ We then preprocessed and tokenized all of the text in the short job listing
+ preview that we scraped from Jobindex.
+ This included getting rid of symbols, numbers and punctuation, seting all
+ text to lowercase, and removing stopwords in Danish and English respectively.
  We tried using the Snowball stemmer since it has features for both Danish
- and English but we found that it shortened words unnecessarily and it didn't
+ and English but found that it shortened words unnecessarily and it didn't
  change our overall results.
  When we started looking at word frequency across texts, we found multiple
  words that had a high frequency but which didn't provide any meaningful
- insights and so we went back and removed them.
+ insights, so we went back and removed them.
+ The final results can be found in the table below.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
@@ -653,7 +1368,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Top 10 most mentioned words in remote job postings 2015-2020
+Top 10 most frequent words in remote job postings 2010-2020
 \end_layout
 
 \end_inset
@@ -697,27 +1412,7 @@ English
 \begin_inset Text
 
 \begin_layout Plain Layout
-Nye
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-København/Copenhagen
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Salg/Sælger
+Salg
 \end_layout
 
 \end_inset
@@ -737,46 +1432,6 @@ Sales
 \begin_inset Text
 
 \begin_layout Plain Layout
-København
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Manager
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Manager
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Team
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 Udvikling/Udvikle
 \end_layout
 
@@ -786,47 +1441,7 @@ Udvikling/Udvikle
 \begin_inset Text
 
 \begin_layout Plain Layout
-Business
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-IT
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Hub
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 Team
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-New
 \end_layout
 
 \end_inset
@@ -846,7 +1461,27 @@ Erfaring
 \begin_inset Text
 
 \begin_layout Plain Layout
-Developer/Development
+Solutions
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Team
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Copenhagen
 \end_layout
 
 \end_inset
@@ -866,27 +1501,7 @@ Samarbejde
 \begin_inset Text
 
 \begin_layout Plain Layout
-Customer/Customers
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Skabe
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Support
+Development
 \end_layout
 
 \end_inset
@@ -897,7 +1512,7 @@ Support
 \begin_inset Text
 
 \begin_layout Plain Layout
-7209 remote job postings
+København
 \end_layout
 
 \end_inset
@@ -906,7 +1521,107 @@ Support
 \begin_inset Text
 
 \begin_layout Plain Layout
-2162 remote job postings
+Customers
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ansvar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hub
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Services
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mulighed
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Global
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Produkter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Manager
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11851 remote job postings
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2884 remote job postings
 \end_layout
 
 \end_inset
@@ -920,6 +1635,36 @@ Support
 \end_layout
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Note: The text analysis is performed using a preview of the full job listing
+ provided by Jobindex
+\end_layout
+
+\begin_layout Plain Layout
+Source: Own calculations using text data from www.jobindex.dk/jobsoegning
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -929,33 +1674,995 @@ Support
 \end_layout
 
 \begin_layout Standard
-Job Functions
+The first thing that comes to mind when looking at Table 2 is how similar
+ the words are across languages.
+ Both in English and Danish, sales is the most frequent word.
+ We also see that Copenhagen is mentioned quite often, which is in line
+ with the trend we saw before whereby remote positions tend to concentrate
+ around the capital.
+ The fact that the word 
+\begin_inset Quotes eld
+\end_inset
+
+mulighed (possibility)
+\begin_inset Quotes erd
+\end_inset
+
+ is included when advertising for remote jobs suggests that working remotely
+ is often used as a selling point to make a position more attractive to
+ applicants.
+ Take for example the following snippet taken from Jobindex and translated
+ to English: 
+\begin_inset Quotes eld
+\end_inset
+
+Your work will take place in our office in Copenhagen, but there will be
+ a possibility of working from home
+\begin_inset Quotes erd
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Dit arbejdet vil foregå fra vores kontor i København, men der vil være mulighed
+ for hjemmearbejde
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
-\begin_layout Section*
-Forecasting
+\end_inset
+
+ By signaling to job seekers that there is a possibility of working partly
+ or fully remotely, employers can expand their pool of applicants not only
+ across geographical location but also socioeconomic background.
+ Evidence of this has been found before; For example, a 2017
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
+
+\end_inset
+
+ study about women working in tech found that 76% of the women surveyed
+ listed remote working opportunities as top priority when it comes to closing
+ the gender gap.
+ Moreover, the most frequent words in job listings can be grouped around
+ two major themes, namely IT and sales, which is not surprising given what
+ we have seen in the descriptive analysis.
+ However, one could imagine that not all jobs related to sales and IT can
+ be performed remotely, and we would like to know with more detail which
+ type of jobs are being advertised as remote.
+ For this, we extract the top 10 most frequent words used in the titles
+ from job listings, where the name of the position is usually mentioned.
+ The same procedure as with the preview of the job listings is followed
+ and the results can be found in the table below.
+ Once again, these words are fairly similar across languages.
+ They both have 
+\begin_inset Quotes eld
+\end_inset
+
+manager
+\begin_inset Quotes erd
+\end_inset
+
+ as the most frequent word, which together with the word 
+\begin_inset Quotes eld
+\end_inset
+
+sap
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Quotes erd
+\end_inset
+
+ in this context most likely referring to Systems Applications and Products
+ in Data Processing software
 \end_layout
 
-\begin_layout Section*
-Discussion
+\end_inset
+
+ suggests that remote jobs are mostly advertised for management positions.
+ Moreover, as suggested by words like 
+\begin_inset Quotes eld
+\end_inset
+
+senior
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+specialist
+\begin_inset Quotes erd
+\end_inset
+
+,
+\begin_inset Quotes eld
+\end_inset
+
+erfaren(experienced)
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+consultant
+\begin_inset Quotes erd
+\end_inset
+
+, it seems that within the IT sector, remote job listings center around
+ senior positions; while, more ambiguous words like 
+\begin_inset Quotes eld
+\end_inset
+
+engineer
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+developer
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+teknisk
+\begin_inset Quotes erd
+\end_inset
+
+ could also be used in the context of entry-level jobs.
+ In the case of sales, this analysis doesn't get us much further than what
+ was observed before.
 \end_layout
 
 \begin_layout Standard
-xxxx..
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Top 10 most frequent words in the title of remote job postings 2010-2020
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Danish
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+English
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Manager
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Manager
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Salgskonsulent
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sales
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Account
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Developer
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sælger/Sales/Salg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Denmark
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sjælland
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Account
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Key
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Consultant
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Konsulent
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Engineer
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Teknisk
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Senior
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sap
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Erfaren
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Specialist
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11851 remote job postings
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2884 remote job postings
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Note: The text analysis is performed using a preview of the full job listing
+ provided by Jobindex
+\end_layout
+
+\begin_layout Plain Layout
+Source: Own calculations using text data from www.jobindex.dk/jobsoegning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Forecasting as a COVID-19 counterfactual
 \end_layout
 
 \begin_layout Standard
-Another interesting insight of remote job postings would be to identify
- which job functions are especially becoming more remote.
- See Højbjerre, Brauer & Schultz.
+We will do two things
+\end_layout
+
+\begin_layout Standard
+1.
+ What would it have looked like if it wasnt for COVID 19
+\end_layout
+
+\begin_layout Standard
+2.
+ Now that COVID has happened what can we expect for the future
+\end_layout
+
+\begin_layout Standard
+As social scientists, we are often interested in estimating the treatment
+ effect that different exogenous shocks such as policy changes can have
+ on different variables on interest.
+ Although the development in remote job listings for 2020 doesn't particularly
+ stand out when compared to the rest of the sample, it is reasonable to
+ believe[INSERT SOME SOURCE] that the oubreak of the pandemic has forced
+ businesses to change the way they operate in order to adapt to the environment
+ of uncertainty regarding their employees' mobility.
+ In this case, the mobility restrictions imposed by governments' can be
+ seen as an exogenous shock to the remote labour market and it is worth
+ questioning what the magnitude of the effect of this shock is.
+ Ideally, we would like to observe our outcome (remote job listings) in
+ both state of the worlds, that is, both with and without the presence of
+ COVID-19.
+ Although this is impossible, fitting a model using data for the period
+ prior to the pandemic and making a forecast for 2020 could provide us with
+ an artificial counterfactual to the actual development of remote job listings.
+ Notice that the purpose of this exercise is not to formally estimate the
+ true causal effect of COVID-19 on remote work, but rather to motivate and
+ challenge future research into the potential that policy changes have on
+ rearranging the incentives in the labour market.
+ Since we have univariate time series data, for our forecasting we chose
+ to use the Prophet algorithm developed by Facebook since it is considered
+ to perform well in modelling data with seasonal effects
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-2"
+literal "false"
+
+\end_inset
+
+ and shifts in trends.Part of the attractiveness of Prophet is that it automatica
+lly finds seasonal trends beneath the data and offers a set of parameters
+ that are easy to understand and can be calibrated accordingly.
+\end_layout
+
+\begin_layout Standard
+One of the many hidden secrets that is not so obvious when first using Prophet
+ is that it has a built-in cross validation function.
+ This function will take your data and train the model on a period you specify.
+ It will then predict a period that you also specify.
+ Prophet will then train your data on a bigger period, then predict again
+ and this will repeat until the end point is reached.
+\end_layout
+
+\begin_layout Standard
+Since we believe there is year seasonality we set the crossvalidation function
+ to start on using 12 months to predict the next 2.
+\end_layout
+
+\begin_layout Standard
+Linear growth
+\end_layout
+
+\begin_layout Standard
+built-in cross validation function
+\end_layout
+
+\begin_layout Standard
+We used Prophet's built-in cross validation function in Python.
+ This function takes our data and trains the model based on a period you
+ specify and will then predict a period that we also specify.
+ In this case, since we suspect there is yearly seasonality, we start by
+ training the model using two years of data at a time and predicting the
+ next three months.
+ Prophet will then train our data on a bigger period, then predict again
+ and this will repeat until the end point is reached.
+\end_layout
+
+\begin_layout Standard
+How Prophet works At its core, the Prophet procedure is an additive regression
+ model with four main components:
+\end_layout
+
+\begin_layout Standard
+A piecewise linear or logistic growth curve trend.
+ Prophet automatically detects changes in trends by selecting changepoints
+ from the data.
+ A yearly seasonal component modeled using Fourier series.
+ A weekly seasonal component using dummy variables.
+ A user-provided list of important holidays.
+\end_layout
+
+\begin_layout Standard
+should in no way interpreted as a formal esimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/lisbe/OneDrive/11. Semester/Social Data Science/forecast.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Prophet uses non-parametric regression model with four main components:
+\end_layout
+
+\begin_layout Itemize
+A piecewise linear or logistic growth curve trend.
+ Prophet automatically detects changes in trends by selecting changepoints
+ from the data.
+\end_layout
+
+\begin_layout Itemize
+A yearly seasonal component modeled using Fourier series.
+\end_layout
+
+\begin_layout Itemize
+A weekly seasonal component using dummy variables.
+\end_layout
+
+\begin_layout Itemize
+A user-provided list of important holidays.
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+This indicates that over all the points predicted, we are out with an average
+ of 15.32% from the true value.
 \end_layout
 
 \begin_layout Section*
-Conclusion
+Discussion and conclusion
 \end_layout
 
-\begin_layout Section*
-References
+\begin_layout Standard
+From our descriptive analysis of remote job listings published in 2020,
+ it is clear that the outbreak of COVID-19 has brought greater focus on
+ remote work from the employers' side.
+ 
+\begin_inset Newline newline
+\end_inset
+
+The relative increase of remote job postings in the Capital Region and the
+ presence of 
+\begin_inset Quotes eld
+\end_inset
+
+København/Copenhagen
+\begin_inset Quotes erd
+\end_inset
+
+ in the top 10 most frequent words in remote listings are especially in
+ line with findings by OECD (2020) wherey big cities have a larger share
+ of jobs that can be performed remotely and workplaces located in big cities
+ may have higher incentives to adapt to remote working conditions due to
+ higher risk of contagion.
+ Since the outbreak of the pandemic is still relatively recent, it would
+ be interesting to revisit this analysis again at a later point in time
+ and investigate whether regions with higher potential and incentives for
+ remote were indeed better at handling the economic downturn.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+One of the strengths of using job postings data to study the labour market
+ is that is is completely up-to-date, whereas we would otherwise have to
+ wait for official employment statistic to be released.
+ However, we must still be careful with drawing conclusions from a 6-month
+ period, in a time where the economy and labour market has potentially changed
+ on a structural level.
+ Although there has been an evident increase in remote jobs following the
+ outbreak of COVID-19, we do not yet know if this rate of expansion will
+ persist in the long run.
+ So far, the increases in remote labour demand has been welcomed and encouraged
+ by politicians
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-4"
+literal "false"
+
+\end_inset
+
+ and the employers' organisation, Confederation of Danish Industry (DI).
+ DI further recommends that companies formalize guidelines for remote work
+ and evaluate continuously in order for remote work to be successfully adopted
+ without comprimising productivity.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3-1"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+Along with companies offering more remote positions comes the need for a
+ way that job seekers can find these positions easily.
+ In this project, we identified remote listings with an average accuracy
+ of 80% by searching for a list of keywords/expressions linked to remote
+ work that we defined.
+ The sudden increase in remote listings provides an opportunity for Jobindex
+ and other job portals to implement a 
+\begin_inset Quotes eld
+\end_inset
+
+remote
+\begin_inset Quotes erd
+\end_inset
+
+ filter/checkbox to smooth the process of job searching.
+ Such a feature is already implemented in the Careergate jobportal, but
+ it does not seem to work properly
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+We take full responsibility for this statement, as it is based solely on
+ our own experience :-)
+\end_layout
+
+\end_inset
+
+ when comparing results from the filter to those found using the keywords.
+ We think this has to do with Careergate labelling a vacancy as remote only
+ if the employer has directly specified so (probably by checking a 
+\begin_inset Quotes eld
+\end_inset
+
+remote
+\begin_inset Quotes erd
+\end_inset
+
+ box when submitting the job listing) and not by looking through the text.
+ In order to provide job seekers with search results that aren't as sensitive
+ to human error, we suggest that such a feature is complemented using text
+ analysis.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given our contraints on time and space, we had to limit the scope of the
+ project in several dimensions.
+ Initially, we set out to scrape all job postings from Jobindex over the
+ period 2008-2020, so that our sample would include a year prior to the
+ financial crisis and allow us to put the effect of COVID-19 into perspective.
+ As the program we coded to do this would have taken days to execute, we
+ went through with a smaller period including only data for remote job listings.
+ However, the full dataset would allow for further insight into the remote
+ labour market and how the patterns found in the remote job listings compare
+ to those from the total job listings.
+ This doesn't mean that our data isn't interesting enough, one could for
+ example match our data for the name of the company postng the job listing
+ to data from the Central Business register and thereby get a picture industry,
+ size and nationalies of employers offering remote work opportunities.
+ Another interesting exercise, which we ourselves performed but had to exclude
+ to due poor accuracy when testing, is to match the words in the job titles
+ to the job functions included in the DISCO-08 classification, this would
+ tell us with more precision which type of jobs are going remote set-up
+ see whether the pattern found by OECD (2020) whereby the potential of remote
+ work increases with the overall skill level of the population is present.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-8"
+
+\end_inset
+
+Confederation of Danish Industry (DI) Retrieved from https://www.danskindustri.dk/
+vi-radgiver-dig-ny/personale/personalejura/vilkar-under-ansattelsen/personalepol
+itik/hjemmearbejde
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-9"
+
+\end_inset
+
+Dingel, J and B Neiman (2020), “How Many Jobs Can be Done at Home?”, Covid
+ Economics: Vetted and Real-Time Papers 1: 16-24.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-10"
+
+\end_inset
+
+Højbjerre Brauer Schultz (2016) "Analyse af arbejdskraftefterspørgslen ved
+ hjælp af jobopslag"
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-11"
+
+\end_inset
+
+Loubier, A.
+ (2017, March 13) 
+\begin_inset Quotes eld
+\end_inset
+
+How Working Remotely Is Helping Women Close The Gender Gap In Tech
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\shape italic
+Forbes.
+ 
+\shape default
+Retrieved from https://www.forbes.com/sites/andrealoubier/2017/03/13/how-working-r
+emotely-is-helping-women-close-the-gender-gap-in-tech/#16dcf1974ea7
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-12"
+
+\end_inset
+
+Mothes, J.
+ (2020, January) 
+\begin_inset Quotes eld
+\end_inset
+
+From Job Description to Salary Prediction
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\shape italic
+Data Science Retreat 
+\shape default
+Retrieved from https://www.datascienceretreat.com/wp-content/uploads/2020/02/Salar
+y-Prediction.pdf
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-13"
+
+\end_inset
+
+Smialek, J.
+ (2015, March 13) 
+\begin_inset Quotes eld
+\end_inset
+
+Want a New Job? Game These Seasonal Trends in the U.S
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\shape italic
+Bloomberg.
+ 
+\shape default
+Retrieved from bloomberg.com/news/articles/2015-12-17/want-a-new-job-game-these-s
+easonal-trends-in-the-u-s-
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-14"
+
+\end_inset
+
+Sorgenfri (2020, August 12) 
+\begin_inset Quotes eld
+\end_inset
+
+Partier: Vi skal igen til at arbejde hjemme
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\shape italic
+Politiken.
+ 
+\shape default
+Retrieved from https://politiken.dk/oekonomi/art7882631/Vi-skal-igen-til-at-arbej
+de-hjemme
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-15"
+
+\end_inset
+
+Özgüzel,C.
+ (2015, July 2020)
+\begin_inset Quotes eld
+\end_inset
+
+Potential for remote working across different places
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\shape italic
+Vox.
+ 
+\shape default
+Retrieved from https://voxeu.org/article/potential-remote-working-across-differen
+t-places?fbclid=IwAR2zo04l-Hdlz9Tn2fCRCs4itnG7rI4_SwjenBl4XK5nWUi2Y35yzCdQmmo
 \end_layout
 
 \end_body

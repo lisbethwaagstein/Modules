@@ -339,15 +339,7 @@ s that can work from home and they estimate that at the national level,
  a greater potential for working from home can provide a source of resilience
  to the economic downturn that follows health crisis such as the outbreak
  of COVID-19.
- (OECD, 2020)
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-15"
-literal "false"
-
-\end_inset
-
-.
+ (OECD, 2020).
 \end_layout
 
 \begin_layout Standard
@@ -383,7 +375,7 @@ The method of obtaining text data by webscraping is still relatively new,
  and the iron, metal and auto sectors
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-10"
+key "key-6"
 literal "false"
 
 \end_inset
@@ -393,7 +385,7 @@ literal "false"
  to estimate appropriate salary
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-12"
+key "key-5"
 literal "false"
 
 \end_inset
@@ -1725,7 +1717,7 @@ Dit arbejdet vil foregå fra vores kontor i København, men der vil være muligh
  Evidence of this has been found before; For example, a 2017
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-11"
+key "key-1"
 literal "false"
 
 \end_inset
@@ -2150,7 +2142,192 @@ Source: Own calculations using text data from www.jobindex.dk/jobsoegning
 \end_layout
 
 \begin_layout Section*
+Forecasting as a COVID-19 counterfactual
+\end_layout
 
+\begin_layout Standard
+We will do two things
+\end_layout
+
+\begin_layout Standard
+1.
+ What would it have looked like if it wasnt for COVID 19
+\end_layout
+
+\begin_layout Standard
+2.
+ Now that COVID has happened what can we expect for the future
+\end_layout
+
+\begin_layout Standard
+As social scientists, we are often interested in estimating the treatment
+ effect that different exogenous shocks such as policy changes can have
+ on different variables on interest.
+ Although the development in remote job listings for 2020 doesn't particularly
+ stand out when compared to the rest of the sample, it is reasonable to
+ believe[INSERT SOME SOURCE] that the oubreak of the pandemic has forced
+ businesses to change the way they operate in order to adapt to the environment
+ of uncertainty regarding their employees' mobility.
+ In this case, the mobility restrictions imposed by governments' can be
+ seen as an exogenous shock to the remote labour market and it is worth
+ questioning what the magnitude of the effect of this shock is.
+ Ideally, we would like to observe our outcome (remote job listings) in
+ both state of the worlds, that is, both with and without the presence of
+ COVID-19.
+ Although this is impossible, fitting a model using data for the period
+ prior to the pandemic and making a forecast for 2020 could provide us with
+ an artificial counterfactual to the actual development of remote job listings.
+ Notice that the purpose of this exercise is not to formally estimate the
+ true causal effect of COVID-19 on remote work, but rather to motivate and
+ challenge future research into the potential that policy changes have on
+ rearranging the incentives in the labour market.
+ Since we have univariate time series data, for our forecasting we chose
+ to use the Prophet algorithm developed by Facebook since it is considered
+ to perform well in modelling data with seasonal effects
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-2"
+literal "false"
+
+\end_inset
+
+ and shifts in trends.Part of the attractiveness of Prophet is that it automatica
+lly finds seasonal trends beneath the data and offers a set of parameters
+ that are easy to understand and can be calibrated accordingly.
+\end_layout
+
+\begin_layout Standard
+One of the many hidden secrets that is not so obvious when first using Prophet
+ is that it has a built-in cross validation function.
+ This function will take your data and train the model on a period you specify.
+ It will then predict a period that you also specify.
+ Prophet will then train your data on a bigger period, then predict again
+ and this will repeat until the end point is reached.
+\end_layout
+
+\begin_layout Standard
+Since we believe there is year seasonality we set the crossvalidation function
+ to start on using 12 months to predict the next 2.
+\end_layout
+
+\begin_layout Standard
+Linear growth
+\end_layout
+
+\begin_layout Standard
+built-in cross validation function
+\end_layout
+
+\begin_layout Standard
+We used Prophet's built-in cross validation function in Python.
+ This function takes our data and trains the model based on a period you
+ specify and will then predict a period that we also specify.
+ In this case, since we suspect there is yearly seasonality, we start by
+ training the model using two years of data at a time and predicting the
+ next three months.
+ Prophet will then train our data on a bigger period, then predict again
+ and this will repeat until the end point is reached.
+\end_layout
+
+\begin_layout Standard
+How Prophet works At its core, the Prophet procedure is an additive regression
+ model with four main components:
+\end_layout
+
+\begin_layout Standard
+A piecewise linear or logistic growth curve trend.
+ Prophet automatically detects changes in trends by selecting changepoints
+ from the data.
+ A yearly seasonal component modeled using Fourier series.
+ A weekly seasonal component using dummy variables.
+ A user-provided list of important holidays.
+\end_layout
+
+\begin_layout Standard
+should in no way interpreted as a formal esimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/lisbe/OneDrive/11. Semester/Social Data Science/forecast.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Prophet uses non-parametric regression model with four main components:
+\end_layout
+
+\begin_layout Itemize
+A piecewise linear or logistic growth curve trend.
+ Prophet automatically detects changes in trends by selecting changepoints
+ from the data.
+\end_layout
+
+\begin_layout Itemize
+A yearly seasonal component modeled using Fourier series.
+\end_layout
+
+\begin_layout Itemize
+A weekly seasonal component using dummy variables.
+\end_layout
+
+\begin_layout Itemize
+A user-provided list of important holidays.
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+This indicates that over all the points predicted, we are out with an average
+ of 15.32% from the true value.
 \end_layout
 
 \begin_layout Section*
