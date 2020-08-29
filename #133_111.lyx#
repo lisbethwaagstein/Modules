@@ -2204,22 +2204,6 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-medskip
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Generally, the most frequent words in job postings can be grouped around
  two major themes, namely IT and sales, which is not surprising given the
  results in the descriptive analysis.
@@ -2673,7 +2657,7 @@ teknisk (technical)
 \end_layout
 
 \begin_layout Section
-Using forecasting as a COVID-19 counterfactual
+Forecasting as a COVID-19 counterfactual
 \end_layout
 
 \begin_layout Standard
@@ -2697,14 +2681,14 @@ Ideally, we would like to observe our target (remote job listings) in both
  rearranging the incentives in the labour market.
 \end_layout
 
-\begin_layout Subsection
-Forecasting with the Prophet procedure
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard
 Since we have uni-variate time series data on monthly remote job listings,
  for our forecasting we chose to use the Prophet algorithm developed by
- Facebook, as it is considered to perform well in modeling data with seasonal
+ Facebook since it is considered to perform well in modeling data with seasonal
  effects[BLOOMBERG ARTIKEL] and shifts in trends.
  Part of the attractiveness of Prophet is that it automatically finds seasonal
  trends beneath the data and offers a set of parameters that are easy to
@@ -2738,10 +2722,7 @@ y\left(t\right)=g\left(t\right)+s\left(t\right)+h\left(t\right)+\epsilon_{t}
 
  represents the effects of holidays which occur on potentially irregular
  schedules.
-\end_layout
-
-\begin_layout Standard
-We can choose the calibration for each of these components or allow Prophet
+ We can choose the calibration for each of these components or allow Prophet
  to estimate them on its own.
  We start by allowing Prophet to calibrate the parameters and then looking
  at cross-validation metrics to see whether we can improve the model's performan
@@ -2752,15 +2733,33 @@ ce by changing the hyper-parameters that Prophet defined.
  Prophet will then train our data on a bigger period, then predict again
  and this will repeat itself until the end point is reached and the model
  cannot be further optimized.
-\end_layout
-
-\begin_layout Standard
-Since we want the training data set to have enough data to capture yearly
+ Since we want the training data set to have enough data to capture yearly
  seasonality, we set the cross-validation function to start by using the
  first 24 months to predict the next 9 months.
  The Mean Average Percentage Error for the cross-validation exercise using
- the parameters chosen by Prophet can be found in the first column of Table
- 4 below.
+ the parameters chosen by Prophet can be found in the first column of the
+ Table below.
+ Prophet has found a linear trend to be the best fit and based on what we
+ saw in the graphical analysis we do not have any reason to think that remote
+ job listings will be reaching a saturation point in the near future; therefore,
+ we leave this parameter as it is.
+ However, the graphical analysis above did show that remote job listings
+ tend to be extremely low during the summer holiday.
+ Therefore we specify a holiday component for June of each year, and allow
+ for the effect to extend to days leading to the holiday.
+ We find that although having similar MAPEs, the specification chosen by
+ Prophet beats ours.
+ Next, we allow for a monthly seasonality component since there has been
+ found to be some persistent patterns across months in data for US job openings.
+ However, doing so significantly worsens the performance of our model and
+ since cannot come up with any more parameter changes that could improve
+ the model fine-tuned by Prophet, we proceed with using this for our forecasting
+ exercise.
+ The results can be found in the figure below.
+ We see that the model tends to underpredict the trend in remote job listings,
+ however, the difference between actual and predicted values for the 2020
+ period stands particularly out which is in line with our suspicion that
+ the outbreak of COVID-19 has accelerated the expansion of remote work.
 \end_layout
 
 \begin_layout Standard
@@ -2768,7 +2767,7 @@ Since we want the training data set to have enough data to capture yearly
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2781,27 +2780,6 @@ Mean Average Percentage Error across differet model specifications
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-medskip
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="4">
 <features tabularvalignment="middle">
@@ -2895,30 +2873,6 @@ MAPE
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-...Prophet has found a linear trend to be the best fit and based on what we
- saw in the graphical analysis we do not have any reason to think that remote
- job listings will be reaching a saturation point in the near future; therefore,
- we leave this parameter as it is.
- However, the graphical analysis above did show that remote job listings
- tend to be extremely low during the summer holiday.
- Therefore we specify a holiday component for June of each year, and allow
- for the effect to extend to days leading to the holiday.
- We find that although having similar MAPEs, the specification chosen by
- Prophet beats ours.
- Next, we allow for a monthly seasonality component since there has been
- found to be some persistent patterns across months in data for US job openings.
- However, doing so significantly worsens the performance of our model and
- since cannot come up with any more parameter changes that could improve
- the model fine-tuned by Prophet, we proceed with using this for our forecasting
- exercise.
- The results can be found in the figure below.
- We see that the model tends to underpredict the trend in remote job listings,
- however, the difference between actual and predicted values for the 2020
- period stands particularly out which is in line with our suspicion that
- the outbreak of COVID-19 has accelerated the expansion of remote work.
 \end_layout
 
 \begin_layout Standard
