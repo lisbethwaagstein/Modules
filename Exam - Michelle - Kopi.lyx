@@ -1863,8 +1863,10 @@ København/Copenhagen
 \end_layout
 
 \begin_layout Standard
-We must also be careful with putting too much emphasis on datapoints from
- a 6-month period, where the world has been turned upside down.
+One of the strengths of the job posting data is, that is is completely up-to-dat
+e.
+ On the other hand, we must still be careful with putting too much emphasis
+ on data from a 6-month period, where the world has been turned upside down.
  We have seen an increse in the number and share of job postings with the
  option of working remotely during the COVID-19 pandemic, but we do not
  yet know if this expansion will persist in the long run.
@@ -1881,7 +1883,8 @@ https://politiken.dk/oekonomi/art7882631/Vi-skal-igen-til-at-arbejde-hjemme
 
  and the employers' organisation, Confederation of Danish Industry (DI).
  DI recommend, that companies formalize guidelines for remote work and evaluate
- continuously for this new way of working to be a success
+ continuously for this new way of working to be a success for both employers
+ and employees
 \begin_inset Foot
 status collapsed
 
@@ -1908,13 +1911,9 @@ medskip
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Along with an expectation of remote work becoming more normal in the future
- comes the convenience for job seekers to be able to look up job postings
- with the option of remote work.
+Along with companies posting more jobs with the option of working remotely
+ comes the convenience for job seekers to be able to find these job postings
+ easily.
  In this project we have scraped data from jobindex based on a list of words/phr
 ases linked to remote work defined by us, and on the basis of this list,
  we have been able to label job postings as remote with an average accuracy
@@ -1950,7 +1949,7 @@ We take full responsibility of this statement, as it is solely based on
 \end_inset
 
 .
- This could indicate, that such a chechbox function should be driven by
+ This could indicate, that such a checkbox function should be driven by
  data rather than humans publishing job postings.
 \end_layout
 
@@ -1972,92 +1971,67 @@ medskip
 
 \begin_layout Standard
 Given the contraint on time and pages, we had to limit the scope of the
- project on different dimensions.
+ project in more dimensions.
  Initially, we set out to scrape all job postings from Jobindex over the
  period 2008-2020, so we had a year prior to the global finansial crisis
  to compare to 2019, the year before the COVID-19 crisis.
- But as the program would have taken days to execute, we went with a smaller
+ As the program would have taken days to execute, we went with a smaller
  dataset for this project.
  However, the full dataset would still be interesting to obtain.
- As the scraped text data is not perfect, we have taken many decisions along
- the way.
 \end_layout
 
 \begin_layout Standard
-We have used the filters on Jobindex to obtain job category and area, but
- since one job posting can be in more than one category and we have removed
- duplicates, job postings are only characterized with one job category.
- Ideally, we would like the job category to follow the standard DB07 classificat
-ion...............
-\end_layout
-
-\begin_layout Standard
-Another interesting insight of remote job postings would be to identify
- which job functions are especially becoming more remote.
- See Højbjerre, Brauer & Schultz.
-\end_layout
-
-\begin_layout Standard
-Discussion: If jobindex had a filter for “Fjernarbejde”, we could evaluate
- on this.
- By scraping the text in the job posting (however a problem with the old
- job postings, because the links are not working).
- Why do we want to KNOW this forecasting/prediction? What is the demand
- for people working remotely.
- brug til at lave en filter i jobindex
-\end_layout
-
-\begin_layout Standard
-................further research: explore different job functions.
- maybe mostly highly educated will work from home? this is what they find
- in https://www.dallasfed.org/-/media/documents/research/papers/2020/wp2017.pdf.
- and OECD (2020): the potential of remote work increases with the overall
- skill level of the population.
-\end_layout
-
-\begin_layout Standard
-...................
-\end_layout
-
-\begin_layout Standard
-HBS: Based on the company name, data is then linked to the Central Business
- register, where additional information is extracted about the size, industry
- and geographical location of the company.
-\end_layout
-
-\begin_layout Standard
--
-\end_layout
-
-\begin_layout Standard
-–> Assessing remote working potential through a classification of occupations
- To assess regional differences in remote working potential, our study exploits
- the diversity of tasks performed in different types of occupations and
- the geographical distribution of those occupations.
- The assessment of remote working potential across regions consists of two
- steps.
- https://voxeu.org/article/potential-remote-working-across-different-places?fbcli
-d=IwAR2zo04l-Hdlz9Tn2fCRCs4itnG7rI4_SwjenBl4XK5nWUi2Y35yzCdQmmo
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
+Text data is not perfecta and we have taken many decisions along the way
+ that shape the final dataset
+\begin_inset Foot
+status collapsed
 
 \begin_layout Plain Layout
-
-
-\backslash
-medskip
+Most of the considerations and decisions are also described in the notebook
 \end_layout
 
 \end_inset
 
-
+.
+ We have used the filters on Jobindex to obtain job category and area, but
+ since one job posting can be in more than one category and we have removed
+ duplicates, job postings are only characterized with one job category.
+ It could be valuable to link the data to the Central Business register
+ to get additional and more detailed information about the industry, size
+ and precise address of the company.
 \end_layout
 
 \begin_layout Standard
-.....
+Another interesting insight of the remote job postings would be to identify
+ which job functions and skills/competencies are especially demanded in
+ remote job postings.
+ According to OECD (2020), the potential of remote work increases with the
+ overall skill level of the population, because a large share of jobs possessed
+ by highly educated people are so-called 
+\begin_inset Quotes eld
+\end_inset
+
+desk jobs
+\begin_inset Quotes erd
+\end_inset
+
+.
+ This will require comprehensive data processing such as further text analysis
+ and categorization of the data within each job function.
+ As mentioned before, Højbjerre, Brauer & Schultz has done this for two
+ industries, and conclude that the method could use some finetuning, but
+ the workload should gradually decrease as the analysis is repeated
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://www.hbseconomics.dk/wp-content/uploads/2017/08/Analyse-af-arbejdskraftefte
+rsp%C3%B8rgslen-ved-hj%C3%A6lp-af-jobopslag-1.pdf
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
