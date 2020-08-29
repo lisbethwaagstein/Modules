@@ -1604,17 +1604,13 @@ Part of the attractiveness of working remotely, either full-time or part-time,
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Figure 5
-\series default
- shows remote job postings as a share of total jobs postings across different
- Danish regions in 2010 and 2020.
+Figure 5 shows remote job postings as a share of total jobs postings across
+ different Danish regions in 2010 and 2020.
  We have chosen these two points in time for multiple reasons, one of them
  being that they are the first and last points in our dataset.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Jeg ved ikke om det her er vigtigt.
@@ -1639,7 +1635,7 @@ However, we must bear in mind that the global financial crisis hit Denmark
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 In light of economic cycles, we therefore find is most reasonable to compare
@@ -1773,22 +1769,25 @@ Text analysis
 \end_layout
 
 \begin_layout Standard
-In this section we wanted to identify the most frequent words in the job
- listings that we classified as remote.
- Since our job listings included both job listings in Danish and English,
+We identify the most frequent words in the job listings that we classified
+ as remote by utilizing text analysis.
+ Since our job listings include both job listings in Danish and English,
  we made use of a language detector package that allowed us to split the
  dataset accordingly.
  We then preprocessed and tokenized all of the text in the short job listing
- preview that we scraped from Jobindex.
+ preview scraped from Jobindex.
  This included getting rid of symbols, numbers and punctuation, seting all
  text to lowercase, and removing stopwords in Danish and English respectively.
- We tried using the Snowball stemmer since it has features for both Danish
- and English but found that it shortened words unnecessarily and it didn't
- change our overall results.
- When we started looking at word frequency across texts, we found multiple
- words that had a high frequency but which didn't provide any meaningful
- insights, so we went back and removed them.
- The final results can be found in table 2 below.
+\end_layout
+
+\begin_layout Standard
+We tried using the Snowball stemmer since it has features for both Danish
+ and English, but found that it shortened words unnecessarily, while it
+ did not change the overall results.
+ First, we looked at word frequency across texts, and found multiple words
+ that had a high frequency but which didn't provide any meaningful insights,
+ so we went back and removed them.
+ The final results can be found in Table 2.
 \end_layout
 
 \begin_layout Standard

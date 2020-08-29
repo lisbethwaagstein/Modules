@@ -232,7 +232,7 @@ The spread of COVID-19 has forced governments to impose restrictions on
  working remotely will be the new normal.
  In this project, we scrape data from job postings published in the Danish
  jobportal Jobindex to investigate the development of remote work in Denmark
- over the period 2010-2020.
+ for the period 2010-2020.
  Our descriptive analysis confirms that the option of working remotely has
  become increasingly available throughout the whole period, and the global
  pandemic seems to have created a wave for workplaces to ride on.
@@ -376,7 +376,7 @@ Exam number 111 has contributed to the following sections:
 \end_layout
 
 \begin_layout Standard
-1, 2.2, 3.1, 5
+1, 1.1, 2.2, 3.1, 5
 \end_layout
 
 \begin_layout Standard
@@ -429,7 +429,7 @@ medskip
 \begin_layout Standard
 In this project, we use data from job postings to 
 \shape italic
-investigate the development of remote work in Denmark over the period 2010-2020
+investigate the development of remote work in Denmark for the period 2010-2020
 \shape default
 .
  
@@ -487,28 +487,17 @@ idated using different training and testing data.
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-medskip
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 To the best of our best knowledge, there does not currently exist any studies
  of the remote labour market in Denmark using data from job postings.
  Thus, this paper's contribution is to complement the picture of the remote
  labour market which has already been painted by previous research with
  insights from the demand side of the Danish labour market.
- Our descriptive analysis confirms what media outlets and academics have
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Our descriptive analysis confirms what media outlets and academics have
  foreseen, namely, that the option of working remotely is becoming increasingly
  available, and the global pandemic seems to have created a 
 \begin_inset Quotes eld
@@ -525,6 +514,11 @@ remote work
  to become widespread in the long-run.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -542,9 +536,9 @@ medskip
 \end_layout
 
 \begin_layout Standard
-The rest of the paper is structured as follows: Section 1.1 provides a short
- literature review, Section 2 describes the process of data collection and
- cleaning, and results from sample controls.
+The rest of the paper is structured as follows: Section 1.1 provides a literature
+ review, Section 2 describes the process of data collection and cleaning,
+ and results from sample controls.
  Section 3 is a descriptive analysis of the remote labour market in Denmark
  including a text analysis of the job titles and descriptions.
  Section 4 explains the theory and methods used for forecasting, followed
@@ -707,30 +701,35 @@ Data collection
 
 \begin_layout Standard
 For this project, we scrape job listings from the Danish job portal Jobindex
- in the period 2010-2020.
- More specifically, we will scrape the job title, company, and a preview
- of the full job listing.
- These are all available on Jobindex's search results page (see Figure 1
- below).
+ in the period 2010-2020, more specifically the job title, company, and
+ a preview of the full job listing, which are all available on Jobindex's
+ search results page (see Figure 1 below).
+ We have chosen Jobindex, because it includes not only the portals own job
+ postings, but also almost all publicly available job posting from other
+ job portals and companies' webpages.
 \end_layout
 
 \begin_layout Standard
-Ideally, we would have liked to scrape the full job listing and not just
- the preview.
- However, doing so would require scraping not only Jobindex but also different
- company websites and PDFs with varying HTML structure; and although we
- wrote a program that should be able to achieve this, once we started running
- it we realized it would take more time than what we had available for the
- project.
- It is also due to these same time constraints that we decided not to extend
- the sample period any further than 2010-2020.
- Notice that since all current and archived job listings in Jobindex are
- publicly available and do not contain any personal data, we could not think
- of any ethical breaches to take into consideration before proceeding with
- the scraping.
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Standard job listing in Jobindex
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -746,8 +745,24 @@ medskip
 
 \end_layout
 
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Job_box.PNG
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-Unlike other job portals, Jobindex doesn't have a filter for 
+Unlike some other job portals, Jobindex does not have a filter for 
 \begin_inset Quotes eld
 \end_inset
 
@@ -755,11 +770,36 @@ remote
 \begin_inset Quotes erd
 \end_inset
 
- positions.
- Therefore, the way we identify these listings is by defining a list of
- keywords that we think would be mentioned in a posting offering the possibility
- of working from home.
- This list of keywords is: 
+ job postings.
+ Therefore, we identify the listings by defining a list of keywords, that
+ we assume would be mentioned in a posting offering the option of working
+ from home either part time or full time:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "13cm"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+[
 \begin_inset Quotes eld
 \end_inset
 
@@ -855,26 +895,7 @@ home-office
 \begin_inset Quotes erd
 \end_inset
 
- .
- Moreover, we would also like to classify the job listings according to
- the location of the position, and the branch or industry it falls into.
- As seen in figure 1, this information is not available when looking at
- each job listing individually.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Standard job listing in Jobindex
+]
 \end_layout
 
 \end_inset
@@ -882,7 +903,13 @@ Standard job listing in Jobindex
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
+We were aware that multiple keywords could be present in one job posting
+ creating lots of duplicates, but these were easily deleted using other
+ unique variables.
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -898,34 +925,20 @@ medskip
 
 \end_layout
 
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Job_box.PNG
-	width 12cm
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
-However, Jobindex allows you to filter the results according to date, job
- category and geographical area which meant that we had to scrape the search
- results of all the possible combinations between location, area and remote
- keyword for the period 2010-2010.
- The job categories used by Jobindex are Information Technology, Engineering
- and Technology, Management and Staff, Trade and Service, Industry and Craft,
- Sales and Communication, Teaching, Office and Finance, Social and Health
- and Other positions.
- Moreover, the geographical ares we will include in our data are: Capital
- Area, North Zealand, Region Zealand, Funen, North Jutland, Central Jutland,
- Sotuh Jutland, Bornholm and Denmark
+We also wish to classify the job listings according to the location of the
+ position and the industry it falls into.
+ As seen in figure 1, this information is not available when looking at
+ each job listing individually.
+ However, Jobindex allows you to filter the results according to date, job
+ category and geographical area.
+ The job categories are Information Technology, Engineering and Technology,
+ Management and Staff, Trade and Service, Industry and Craft, Sales and
+ Communication, Teaching, Office and Finance, Social and Health and Other
+ positions.
+ The geographical ares we include in our data are: Capital Area, North Zealand,
+ Region Zealand, Funen, North Jutland, Central Jutland, South Jutland, Bornholm
+ and Denmark
 \begin_inset Foot
 status collapsed
 
@@ -940,9 +953,52 @@ We have experienced, that Denmark is used when no specific region is available.
 \end_layout
 
 \begin_layout Standard
-Lastly, to put the development in remote job listings into perspective,
- we will also need data for the total monthly job listings for the period
- 2010-2020 across categories and geographical areas.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The scrape for this project thus modified the Jobindex-url according to
+ the keywords and all the possible combinations between location, area and
+ remote keyword for the period 2010-2020
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Ideally, we wanted to scrape the full job listing and not just the preview.
+ However, doing so would require scraping not only Jobindex but also different
+ company websites and PDFs with varying HTML structure; and although we
+ wrote a program that was able to achieve this, once we started running
+ it we realized it would take more time than what we had available for the
+ project.
+ It is also due to these time constraints that we decided not to extend
+ the sample period any further than 2010-2020.
+\end_layout
+
+\end_inset
+
+.
+ Since all current and archived job listings in Jobindex are publicly available
+ and do not contain any personal data, we could not think of any ethical
+ breaches to take into consideration before proceeding with the scraping.
+ The final scrape for this project was obtained on August 26, 2020.
+\end_layout
+
+\begin_layout Standard
+Lastly, to put the development in remote job postings into perspective,
+ we need data for the total monthly job listings for the period 2010-2020
+ overall and across categories and geographical areas.
  For this, we change the search filters accordingly and scrape the total
  number of jobs that match our search.
 \end_layout
@@ -959,9 +1015,10 @@ Since the categories and locations provided in Jobindex's search filters
  delete duplicate job listings.
  The step-by-step process can be found in Figure 2.
  Notice that the way we have cleaned our data has the implication that if
- the same job falls under two (or more) categories, by deleting its duplicates
- we are randomly assigning one of the two categories and deleting the others.
- Although this isn't ideal, it is the best solution we could come up with.
+ the same job falls under two (or more) job categories, by deleting its
+ duplicates we are randomly assigning one of the two categories and deleting
+ the others.
+ Although this is not ideal, it is the best solution to avoid duplicates.
  After these steps, we end up with a dataset consisting of 14717 job listings
  in the period 2010-2020 where at least one of our remote keywords is mentioned.
 \end_layout
@@ -1006,7 +1063,7 @@ medskip
 \align center
 \begin_inset Graphics
 	filename dataset_structure.PNG
-	width 12cm
+	width 14cm
 
 \end_inset
 
@@ -1031,10 +1088,10 @@ We would like to get an idea of how accurate our keywords are in identifying
  remote job listings, ie.
  whether our sample actually consists of job listings where working remotely
  is advertised, or if it is capturing the keywords being used in other contexts.
- To do so, we draw 5 random samples consisting of 10 job listings each.
+ To do so, we draw 5 random samples of 10 job listings each.
  For each listing, we go into Jobindex and read the full job description
  to check whether the possbility of working remotely is actually mentioned.
- The results of this exercise can be found in the table below.
+ The results of this exercise can be found in Table 1.
 \end_layout
 
 \begin_layout Standard
@@ -1042,7 +1099,7 @@ We would like to get an idea of how accurate our keywords are in identifying
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1154,7 +1211,7 @@ Average
 \begin_inset Text
 
 \begin_layout Plain Layout
-Accuracy
+Accuracy, pct.
 \end_layout
 
 \end_inset
@@ -1276,8 +1333,12 @@ Source: Own calculations
 \end_layout
 
 \begin_layout Standard
-Note that 80 pct.
- of the joblistings we counted as fails weren't 
+We find that, on average, we correctly identify remote job postings 80 pct.
+ of the time and the results are fairly robust across samples, ranging from
+ 70-90 pct.
+ in accuracy.
+ It is also worth noting, that 80 pct.
+ of the joblistings counted as fails weren't 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1285,14 +1346,9 @@ true
 \begin_inset Quotes erd
 \end_inset
 
- fails, but rather cases where we couldn't get access to the full job listing
- either due to the link being broken or because Jobindex couldn't retrieve
+ fails, but rather cases where we could not get access to the full job listing
+ either due to the link being broken or because Jobindex could not retrieve
  a copy of the full job listing for archived job postings.
- Despite this, we found that on average, we had correctly identified remote
- job listings 80 pct.
- of the time and the results were fairly robust across samples, ranging
- from 70-90 pct.
- in accuracy.
 \end_layout
 
 \begin_layout Section
@@ -1306,12 +1362,8 @@ Graphical Analysis
 \begin_layout Standard
 We start by looking at the overall trend in job postings published in Jobindex
  in both absolute and relative numbers.
- 
-\series bold
-Figure 3
-\series default
- shows the monthly trend in the number of remote job postings and in the
- total number of job postings on Jobindex in the period 2010-2020.
+ Figure 3 shows the monthly trend in the number of remote job postings and
+ in the total number of job postings on Jobindex in the period 2010-2020.
 \end_layout
 
 \begin_layout Standard
@@ -1402,16 +1454,29 @@ The figure shows an overall increase in both remote and total monthly job
 \end_layout
 
 \begin_layout Standard
-As pointed by earlier research, the potential for working remotely differs
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As pointed out by earlier research, the potential for working remotely differs
  between occupations.
  Next, we look at the differences in remote job postings within different
- job categories.The bars in 
-\series bold
-Figure 4
-\series default
- depict remote job postings as a share of total job postings per year, whereas
- the area inside the bar is used to show the distribution of remote postings
- across job categories for the given year.
+ job categories.
+ The bars in Figure 4 depict remote job postings as a share of total job
+ postings per year, whereas the area inside the bar is used to show the
+ distribution of remote postings across job categories for the given year.
 \end_layout
 
 \begin_layout Standard
@@ -1513,6 +1578,22 @@ desk jobs
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Part of the attractiveness of working remotely, either full-time or part-time,
  is the fact that workers need not commute to the workplace.
  This can save them time, increase flexibility in their everyday life, help
@@ -1523,17 +1604,13 @@ Part of the attractiveness of working remotely, either full-time or part-time,
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Figure 5
-\series default
- shows remote job postings as a share of total jobs postings across different
- Danish regions in 2010 and 2020.
+Figure 5 shows remote job postings as a share of total jobs postings across
+ different Danish regions in 2010 and 2020.
  We have chosen these two points in time for multiple reasons, one of them
  being that they are the first and last points in our dataset.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Jeg ved ikke om det her er vigtigt.
@@ -1558,7 +1635,7 @@ However, we must bear in mind that the global financial crisis hit Denmark
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 In light of economic cycles, we therefore find is most reasonable to compare
@@ -1692,8 +1769,8 @@ Text analysis
 \end_layout
 
 \begin_layout Standard
-In this section we wanted to identify the most frequent words in the job
- listings that we classified as remote.
+We identify the most frequent words in the job listings that we classified
+ as remote by utilizing text analysis.
  Since our job listings included both job listings in Danish and English,
  we made use of a language detector package that allowed us to split the
  dataset accordingly.
